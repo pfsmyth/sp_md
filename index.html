@@ -1,0 +1,2388 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <style>:root
+{
+    --background-color: #ffffff;
+    --color: #000000;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", HelveticaNeue-Light, Ubuntu, "Droid Sans", sans-serif;
+    --font-size: 13px;
+    --font-weight: normal;
+    --link-active-color: #006ab1;
+    --link-color: #006ab1;
+    --vscode-activityBar-background: #2c2c2c;
+    --vscode-activityBar-dropBackground: rgba(255, 255, 255, 0.12);
+    --vscode-activityBar-foreground: #ffffff;
+    --vscode-activityBarBadge-background: #007acc;
+    --vscode-activityBarBadge-foreground: #ffffff;
+    --vscode-badge-background: #c4c4c4;
+    --vscode-badge-foreground: #333333;
+    --vscode-breadcrumb-activeSelectionForeground: #6c6c6c;
+    --vscode-breadcrumb-focusForeground: #6c6c6c;
+    --vscode-breadcrumb-foreground: rgba(108, 108, 108, 0.7);
+    --vscode-breadcrumbPicker-background: #ececec;
+    --vscode-button-background: #007acc;
+    --vscode-button-foreground: #ffffff;
+    --vscode-button-hoverBackground: #0062a3;
+    --vscode-debugExceptionWidget-background: #f1dfde;
+    --vscode-debugExceptionWidget-border: #a31515;
+    --vscode-debugToolBar-background: #f3f3f3;
+    --vscode-descriptionForeground: #717171;
+    --vscode-diffEditor-insertedTextBackground: rgba(155, 185, 85, 0.2);
+    --vscode-diffEditor-removedTextBackground: rgba(255, 0, 0, 0.2);
+    --vscode-dropdown-background: #ffffff;
+    --vscode-dropdown-border: #cecece;
+    --vscode-editor-background: #ffffff;
+    --vscode-editor-findMatchBackground: #a8ac94;
+    --vscode-editor-findMatchHighlightBackground: rgba(234, 92, 0, 0.33);
+    --vscode-editor-findRangeHighlightBackground: rgba(180, 180, 180, 0.3);
+    --vscode-editor-font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", HelveticaNeue-Light, Ubuntu, "Droid Sans", sans-serif;
+    --vscode-editor-font-size: 13px;
+    --vscode-editor-font-weight: normal;
+    --vscode-editor-foreground: #000000;
+    --vscode-editor-hoverHighlightBackground: rgba(173, 214, 255, 0.15);
+    --vscode-editor-inactiveSelectionBackground: #e5ebf1;
+    --vscode-editor-lineHighlightBorder: #eeeeee;
+    --vscode-editor-rangeHighlightBackground: rgba(253, 255, 0, 0.2);
+    --vscode-editor-selectionBackground: #add6ff;
+    --vscode-editor-selectionHighlightBackground: rgba(173, 214, 255, 0.3);
+    --vscode-editor-wordHighlightBackground: rgba(87, 87, 87, 0.25);
+    --vscode-editor-wordHighlightStrongBackground: rgba(14, 99, 156, 0.25);
+    --vscode-editorActiveLineNumber-foreground: #0b216f;
+    --vscode-editorBracketMatch-background: rgba(0, 100, 0, 0.1);
+    --vscode-editorBracketMatch-border: #b9b9b9;
+    --vscode-editorCodeLens-foreground: #999999;
+    --vscode-editorCursor-foreground: #000000;
+    --vscode-editorError-foreground: #d60a0a;
+    --vscode-editorGroup-border: #e7e7e7;
+    --vscode-editorGroup-dropBackground: rgba(38, 119, 203, 0.18);
+    --vscode-editorGroupHeader-noTabsBackground: #ffffff;
+    --vscode-editorGroupHeader-tabsBackground: #f3f3f3;
+    --vscode-editorGutter-addedBackground: #81b88b;
+    --vscode-editorGutter-background: #ffffff;
+    --vscode-editorGutter-deletedBackground: #ca4b51;
+    --vscode-editorGutter-modifiedBackground: #66afe0;
+    --vscode-editorHint-foreground: #6c6c6c;
+    --vscode-editorHoverWidget-background: #efeff2;
+    --vscode-editorHoverWidget-border: #c8c8c8;
+    --vscode-editorIndentGuide-activeBackground: #939393;
+    --vscode-editorIndentGuide-background: #d3d3d3;
+    --vscode-editorInfo-foreground: #008000;
+    --vscode-editorLineNumber-activeForeground: #0b216f;
+    --vscode-editorLineNumber-foreground: #237893;
+    --vscode-editorLink-activeForeground: #0000ff;
+    --vscode-editorMarkerNavigation-background: #ffffff;
+    --vscode-editorMarkerNavigationError-background: #d60a0a;
+    --vscode-editorMarkerNavigationInfo-background: #008000;
+    --vscode-editorMarkerNavigationWarning-background: #117711;
+    --vscode-editorOverviewRuler-addedForeground: rgba(0, 122, 204, 0.6);
+    --vscode-editorOverviewRuler-border: rgba(127, 127, 127, 0.3);
+    --vscode-editorOverviewRuler-bracketMatchForeground: #a0a0a0;
+    --vscode-editorOverviewRuler-commonContentForeground: rgba(96, 96, 96, 0.4);
+    --vscode-editorOverviewRuler-currentContentForeground: rgba(64, 200, 174, 0.5);
+    --vscode-editorOverviewRuler-deletedForeground: rgba(0, 122, 204, 0.6);
+    --vscode-editorOverviewRuler-errorForeground: rgba(255, 18, 18, 0.7);
+    --vscode-editorOverviewRuler-findMatchForeground: rgba(246, 185, 77, 0.7);
+    --vscode-editorOverviewRuler-incomingContentForeground: rgba(64, 166, 255, 0.5);
+    --vscode-editorOverviewRuler-infoForeground: rgba(18, 18, 136, 0.7);
+    --vscode-editorOverviewRuler-modifiedForeground: rgba(0, 122, 204, 0.6);
+    --vscode-editorOverviewRuler-rangeHighlightForeground: rgba(0, 122, 204, 0.6);
+    --vscode-editorOverviewRuler-selectionHighlightForeground: rgba(160, 160, 160, 0.8);
+    --vscode-editorOverviewRuler-warningForeground: rgba(18, 136, 18, 0.7);
+    --vscode-editorOverviewRuler-wordHighlightForeground: rgba(160, 160, 160, 0.8);
+    --vscode-editorOverviewRuler-wordHighlightStrongForeground: rgba(192, 160, 192, 0.8);
+    --vscode-editorPane-background: #ffffff;
+    --vscode-editorRuler-foreground: #d3d3d3;
+    --vscode-editorSuggestWidget-background: #f3f3f3;
+    --vscode-editorSuggestWidget-border: #c8c8c8;
+    --vscode-editorSuggestWidget-foreground: #000000;
+    --vscode-editorSuggestWidget-highlightForeground: #007acc;
+    --vscode-editorSuggestWidget-selectedBackground: #dff0ff;
+    --vscode-editorUnnecessaryCode-opacity: rgba(0, 0, 0, 0.47);
+    --vscode-editorWarning-foreground: #117711;
+    --vscode-editorWhitespace-foreground: rgba(51, 51, 51, 0.2);
+    --vscode-editorWidget-background: #efeff2;
+    --vscode-editorWidget-border: #c8c8c8;
+    --vscode-errorForeground: #a1260d;
+    --vscode-extensionButton-prominentBackground: #327e36;
+    --vscode-extensionButton-prominentForeground: #ffffff;
+    --vscode-extensionButton-prominentHoverBackground: #28632b;
+    --vscode-focusBorder: rgba(0, 122, 204, 0.4);
+    --vscode-foreground: #616161;
+    --vscode-gitDecoration-addedResourceForeground: #587c0c;
+    --vscode-gitDecoration-conflictingResourceForeground: #6c6cc4;
+    --vscode-gitDecoration-deletedResourceForeground: #ad0707;
+    --vscode-gitDecoration-ignoredResourceForeground: #8e8e90;
+    --vscode-gitDecoration-modifiedResourceForeground: #895503;
+    --vscode-gitDecoration-submoduleResourceForeground: #1258a7;
+    --vscode-gitDecoration-untrackedResourceForeground: #018101;
+    --vscode-input-background: #ffffff;
+    --vscode-input-foreground: #616161;
+    --vscode-input-placeholderForeground: #767676;
+    --vscode-inputOption-activeBorder: #007acc;
+    --vscode-inputValidation-errorBackground: #f2dede;
+    --vscode-inputValidation-errorBorder: #be1100;
+    --vscode-inputValidation-infoBackground: #d6ecf2;
+    --vscode-inputValidation-infoBorder: #007acc;
+    --vscode-inputValidation-warningBackground: #f6f5d2;
+    --vscode-inputValidation-warningBorder: #b89500;
+    --vscode-list-activeSelectionBackground: #2477ce;
+    --vscode-list-activeSelectionForeground: #ffffff;
+    --vscode-list-dropBackground: #dff0ff;
+    --vscode-list-errorForeground: #b01011;
+    --vscode-list-focusBackground: #dff0ff;
+    --vscode-list-highlightForeground: #007acc;
+    --vscode-list-hoverBackground: #e8e8e8;
+    --vscode-list-inactiveFocusBackground: #d8dae6;
+    --vscode-list-inactiveSelectionBackground: #dddfea;
+    --vscode-list-invalidItemForeground: #b89500;
+    --vscode-list-warningForeground: #117711;
+    --vscode-menu-background: #f3f3f3;
+    --vscode-menu-selectionBackground: #2477ce;
+    --vscode-menu-selectionForeground: #ffffff;
+    --vscode-menubar-selectionBackground: rgba(0, 0, 0, 0.1);
+    --vscode-menubar-selectionForeground: #333333;
+    --vscode-merge-commonContentBackground: rgba(96, 96, 96, 0.16);
+    --vscode-merge-commonHeaderBackground: rgba(96, 96, 96, 0.4);
+    --vscode-merge-currentContentBackground: rgba(64, 200, 174, 0.2);
+    --vscode-merge-currentHeaderBackground: rgba(64, 200, 174, 0.5);
+    --vscode-merge-incomingContentBackground: rgba(64, 166, 255, 0.2);
+    --vscode-merge-incomingHeaderBackground: rgba(64, 166, 255, 0.5);
+    --vscode-notificationCenterHeader-background: #e2e2e7;
+    --vscode-notificationLink-foreground: #006ab1;
+    --vscode-notifications-background: #efeff2;
+    --vscode-notifications-border: #e2e2e7;
+    --vscode-panel-background: #ffffff;
+    --vscode-panel-border: rgba(128, 128, 128, 0.35);
+    --vscode-panel-dropBackground: rgba(38, 119, 203, 0.18);
+    --vscode-panelTitle-activeBorder: rgba(128, 128, 128, 0.35);
+    --vscode-panelTitle-activeForeground: #424242;
+    --vscode-panelTitle-inactiveForeground: rgba(66, 66, 66, 0.75);
+    --vscode-peekView-border: #007acc;
+    --vscode-peekViewEditor-background: #f2f8fc;
+    --vscode-peekViewEditor-matchHighlightBackground: rgba(245, 216, 2, 0.87);
+    --vscode-peekViewEditorGutter-background: #f2f8fc;
+    --vscode-peekViewResult-background: #f3f3f3;
+    --vscode-peekViewResult-fileForeground: #1e1e1e;
+    --vscode-peekViewResult-lineForeground: #646465;
+    --vscode-peekViewResult-matchHighlightBackground: rgba(234, 92, 0, 0.3);
+    --vscode-peekViewResult-selectionBackground: rgba(51, 153, 255, 0.2);
+    --vscode-peekViewResult-selectionForeground: #6c6c6c;
+    --vscode-peekViewTitle-background: #ffffff;
+    --vscode-peekViewTitleDescription-foreground: rgba(108, 108, 108, 0.7);
+    --vscode-peekViewTitleLabel-foreground: #333333;
+    --vscode-pickerGroup-border: #cccedb;
+    --vscode-pickerGroup-foreground: #006ab1;
+    --vscode-progressBar-background: #0e70c0;
+    --vscode-scrollbar-shadow: #dddddd;
+    --vscode-scrollbarSlider-activeBackground: rgba(0, 0, 0, 0.6);
+    --vscode-scrollbarSlider-background: rgba(100, 100, 100, 0.4);
+    --vscode-scrollbarSlider-hoverBackground: rgba(100, 100, 100, 0.7);
+    --vscode-settings-checkboxBackground: #ffffff;
+    --vscode-settings-checkboxBorder: #cecece;
+    --vscode-settings-dropdownBackground: #ffffff;
+    --vscode-settings-dropdownBorder: #cecece;
+    --vscode-settings-headerForeground: #444444;
+    --vscode-settings-inactiveSelectedItemBorder: #cccedb;
+    --vscode-settings-modifiedItemForeground: #018101;
+    --vscode-settings-numberInputBackground: #ffffff;
+    --vscode-settings-numberInputBorder: #cecece;
+    --vscode-settings-numberInputForeground: #616161;
+    --vscode-settings-textInputBackground: #ffffff;
+    --vscode-settings-textInputBorder: #cecece;
+    --vscode-settings-textInputForeground: #616161;
+    --vscode-sideBar-background: #f3f3f3;
+    --vscode-sideBar-dropBackground: rgba(255, 255, 255, 0.12);
+    --vscode-sideBarSectionHeader-background: rgba(128, 128, 128, 0.2);
+    --vscode-sideBarTitle-foreground: #6f6f6f;
+    --vscode-statusBar-background: #007acc;
+    --vscode-statusBar-debuggingBackground: #cc6633;
+    --vscode-statusBar-debuggingForeground: #ffffff;
+    --vscode-statusBar-foreground: #ffffff;
+    --vscode-statusBar-noFolderBackground: #68217a;
+    --vscode-statusBar-noFolderForeground: #ffffff;
+    --vscode-statusBarItem-activeBackground: rgba(255, 255, 255, 0.18);
+    --vscode-statusBarItem-hoverBackground: rgba(255, 255, 255, 0.12);
+    --vscode-statusBarItem-prominentBackground: #388a34;
+    --vscode-statusBarItem-prominentHoverBackground: #369432;
+    --vscode-tab-activeBackground: #ffffff;
+    --vscode-tab-activeForeground: #333333;
+    --vscode-tab-border: #f3f3f3;
+    --vscode-tab-inactiveBackground: #ececec;
+    --vscode-tab-inactiveForeground: rgba(51, 51, 51, 0.5);
+    --vscode-tab-unfocusedActiveForeground: rgba(51, 51, 51, 0.7);
+    --vscode-tab-unfocusedInactiveForeground: rgba(51, 51, 51, 0.25);
+    --vscode-terminal-ansiBlack: #000000;
+    --vscode-terminal-ansiBlue: #0451a5;
+    --vscode-terminal-ansiBrightBlack: #666666;
+    --vscode-terminal-ansiBrightBlue: #0451a5;
+    --vscode-terminal-ansiBrightCyan: #0598bc;
+    --vscode-terminal-ansiBrightGreen: #14ce14;
+    --vscode-terminal-ansiBrightMagenta: #bc05bc;
+    --vscode-terminal-ansiBrightRed: #cd3131;
+    --vscode-terminal-ansiBrightWhite: #a5a5a5;
+    --vscode-terminal-ansiBrightYellow: #b5ba00;
+    --vscode-terminal-ansiCyan: #0598bc;
+    --vscode-terminal-ansiGreen: #00bc00;
+    --vscode-terminal-ansiMagenta: #bc05bc;
+    --vscode-terminal-ansiRed: #cd3131;
+    --vscode-terminal-ansiWhite: #555555;
+    --vscode-terminal-ansiYellow: #949800;
+    --vscode-terminal-foreground: #333333;
+    --vscode-terminal-selectionBackground: rgba(0, 0, 0, 0.25);
+    --vscode-textBlockQuote-background: rgba(127, 127, 127, 0.1);
+    --vscode-textBlockQuote-border: rgba(0, 122, 204, 0.5);
+    --vscode-textCodeBlock-background: rgba(220, 220, 220, 0.4);
+    --vscode-textLink-activeForeground: #006ab1;
+    --vscode-textLink-foreground: #006ab1;
+    --vscode-textPreformat-foreground: #a31515;
+    --vscode-textSeparator-foreground: rgba(0, 0, 0, 0.18);
+    --vscode-titleBar-activeBackground: #dddddd;
+    --vscode-titleBar-activeForeground: #333333;
+    --vscode-titleBar-inactiveBackground: rgba(221, 221, 221, 0.6);
+    --vscode-titleBar-inactiveForeground: rgba(51, 51, 51, 0.6);
+    --vscode-widget-shadow: #a8a8a8;
+}
+
+body
+{
+    background-color: var(--vscode-editor-background);
+    color: var(--vscode-editor-foreground);
+    font-family: var(--vscode-editor-font-family);
+    font-weight: var(--vscode-editor-font-weight);
+    font-size: var(--vscode-editor-font-size);
+    margin: 0;
+    padding: 0 20px;
+}
+
+img
+{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+a
+{
+    color: var(--vscode-textLink-foreground);
+}
+
+a:hover
+{
+    color: var(--vscode-textLink-activeForeground);
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus
+{
+    outline: 1px solid -webkit-focus-ring-color;
+    outline-offset: -1px;
+}
+
+code
+{
+    color: var(--vscode-textPreformat-foreground);
+}
+
+blockquote
+{
+    background: var(--vscode-textBlockQuote-background);
+    border-color: var(--vscode-textBlockQuote-border);
+}
+
+::-webkit-scrollbar
+{
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: rgba(121, 121, 121, 0.4);
+}
+
+body.vscode-light::-webkit-scrollbar-thumb
+{
+    background-color: rgba(100, 100, 100, 0.4);
+}
+
+body.vscode-high-contrast::-webkit-scrollbar-thumb
+{
+    background-color: rgba(111, 195, 223, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background-color: rgba(100, 100, 100, 0.7);
+}
+
+body.vscode-light::-webkit-scrollbar-thumb:hover
+{
+    background-color: rgba(100, 100, 100, 0.7);
+}
+
+body.vscode-high-contrast::-webkit-scrollbar-thumb:hover
+{
+    background-color: rgba(111, 195, 223, 0.8);
+}
+
+::-webkit-scrollbar-thumb:active
+{
+    background-color: rgba(85, 85, 85, 0.8);
+}
+
+body.vscode-light::-webkit-scrollbar-thumb:active
+{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+body.vscode-high-contrast::-webkit-scrollbar-thumb:active
+{
+    background-color: rgba(111, 195, 223, 0.8);
+}
+
+.emoji
+{
+    height: 20px;
+}
+
+pre
+{
+    white-space: pre-wrap;
+}
+
+.page-break
+{
+    display: block;
+    page-break-after: always;
+}
+
+.no-page-break
+{
+    page-break-inside: avoid;
+}</style>
+<style>/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+html, body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	line-height: auto;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+</style>
+<style>/*
+https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/vs2015.css
+*/
+/*
+ * Visual Studio 2015 dark style
+ * Author: Nicolas LLOBERA <nllobera@gmail.com>
+ */
+
+
+.hljs-keyword,
+.hljs-literal,
+.hljs-symbol,
+.hljs-name {
+	color: #569CD6;
+}
+.hljs-link {
+	color: #569CD6;
+	text-decoration: underline;
+}
+
+.hljs-built_in,
+.hljs-type {
+	color: #4EC9B0;
+}
+
+.hljs-number,
+.hljs-class {
+	color: #B8D7A3;
+}
+
+.hljs-string,
+.hljs-meta-string {
+	color: #D69D85;
+}
+
+.hljs-regexp,
+.hljs-template-tag {
+	color: #9A5334;
+}
+
+.hljs-subst,
+.hljs-function,
+.hljs-title,
+.hljs-params,
+.hljs-formula {
+	color: #DCDCDC;
+}
+
+.hljs-comment,
+.hljs-quote {
+	color: #57A64A;
+	font-style: italic;
+}
+
+.hljs-doctag {
+	color: #608B4E;
+}
+
+.hljs-meta,
+.hljs-meta-keyword,
+.hljs-tag {
+	color: #9B9B9B;
+}
+
+.hljs-variable,
+.hljs-template-variable {
+	color: #BD63C5;
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-builtin-name {
+	color: #9CDCFE;
+}
+
+.hljs-section {
+	color: gold;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+
+/*.hljs-code {
+	font-family:'Monospace';
+}*/
+
+.hljs-bullet,
+.hljs-selector-tag,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+	color: #D7BA7D;
+}
+
+.hljs-addition {
+	background-color: var(--vscode-diffEditor-insertedTextBackground, rgba(155, 185, 85, 0.2));
+	color: rgb(155, 185, 85);
+	display: inline-block;
+	width: 100%;
+}
+
+.hljs-deletion {
+	background: var(--vscode-diffEditor-removedTextBackground, rgba(255, 0, 0, 0.2));
+	color: rgb(255, 0, 0);
+	display: inline-block;
+	width: 100%;
+}
+
+
+/*
+From https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/vs.css
+*/
+/*
+
+Visual Studio-like style based on original C# coloring by Jason Diamond <jason@diamond.name>
+
+*/
+
+.vscode-light .hljs-function,
+.vscode-light .hljs-params {
+	color: inherit;
+}
+
+.vscode-light .hljs-comment,
+.vscode-light .hljs-quote,
+.vscode-light .hljs-variable {
+	color: #008000;
+}
+
+.vscode-light .hljs-keyword,
+.vscode-light .hljs-selector-tag,
+.vscode-light .hljs-built_in,
+.vscode-light .hljs-name,
+.vscode-light .hljs-tag {
+	color: #00f;
+}
+
+.vscode-light .hljs-string,
+.vscode-light .hljs-title,
+.vscode-light .hljs-section,
+.vscode-light .hljs-attribute,
+.vscode-light .hljs-literal,
+.vscode-light .hljs-template-tag,
+.vscode-light .hljs-template-variable,
+.vscode-light .hljs-type {
+	color: #a31515;
+}
+
+.vscode-light .hljs-selector-attr,
+.vscode-light .hljs-selector-pseudo,
+.vscode-light .hljs-meta {
+	color: #2b91af;
+}
+
+.vscode-light .hljs-doctag {
+	color: #808080;
+}
+
+.vscode-light .hljs-attr {
+	color: #f00;
+}
+
+.vscode-light .hljs-symbol,
+.vscode-light .hljs-bullet,
+.vscode-light .hljs-link {
+	color: #00b0e8;
+}
+
+
+.vscode-light .hljs-emphasis {
+	font-style: italic;
+}
+
+.vscode-light .hljs-strong {
+	font-weight: bold;
+}</style>
+
+    </head>
+    <body class="vscode-body vscode-light">
+        <h2 id="creating-objects-in-r" id="creating-objects-in-r-7" data-line="0" class="code-line">Creating objects in R</h2>
+<blockquote data-line="2" class="code-line">
+<h3 id="objects-vs.-variables" id="objects-vs-variables-7" data-line="2" class="code-line">Objects vs. variables</h3>
+<p data-line="4" class="code-line">What are known as <code>objects</code> in <code>R</code> are known as <code>variables</code> in many other
+programming languages. Depending on the context, <code>object</code> and <code>variable</code> can
+have drastically different meanings. However, in this lesson, the two words
+are used synonymously. For more information see:
+<a href="https://cran.r-project.org/doc/manuals/r-release/R-lang.html#Objects">https://cran.r-project.org/doc/manuals/r-release/R-lang.html#Objects</a></p>
+</blockquote>
+<p data-line="13" class="code-line">You can get output from R simply by typing math in the console:</p>
+<pre><code data-line="16" class="code-line language-r"><div><span class="hljs-number">3</span> + <span class="hljs-number">5</span>
+</div></code></pre>
+<pre><code data-line="23" class="code-line"><code><div>[1] 8
+</div></code></code></pre>
+<pre><code data-line="30" class="code-line language-r"><div><span class="hljs-number">12</span> / <span class="hljs-number">7</span>
+</div></code></pre>
+<pre><code data-line="37" class="code-line"><code><div>[1] 1.714286
+</div></code></code></pre>
+<p data-line="42" class="code-line">However, to do useful and interesting things, we need to assign <em>values</em> to
+<em>objects</em>. To create an object, we need to give it a name followed by the
+assignment operator <code>&lt;-</code>, and the value we want to give it:</p>
+<pre><code data-line="47" class="code-line language-r"><div>area_hectares &lt;- <span class="hljs-number">1.0</span>
+</div></code></pre>
+<p data-line="52" class="code-line"><code>&lt;-</code> is the assignment operator. It assigns values on the right to objects on
+the left. So, after executing <code>x &lt;- 3</code>, the value of <code>x</code> is <code>3</code>. The arrow can
+be read as 3 <strong>is assigned the value of</strong> <code>x</code>.  For historical reasons, you can also use <code>=</code>
+for assignments, but not in every context. Because of the
+<a href="http://blog.revolutionanalytics.com/2008/12/use-equals-or-arrow-for-assignment.html">slight</a>
+<a href="http://r.789695.n4.nabble.com/Is-there-any-difference-between-and-tp878594p878598.html">differences</a>
+in syntax, it is good practice to always use <code>&lt;-</code> for assignments. If you search the Internet for help with R code, you will occasionally see examples using <code>=</code>, but the majority will use <code>&lt;-</code>.&gt;</p>
+<p data-line="60" class="code-line">In RStudio, typing <kbd>Alt</kbd> + <kbd>-</kbd> (push <kbd>Alt</kbd> at the
+same time as the <kbd>-</kbd> key) will write <code>&lt;- </code> in a single keystroke in a
+PC, while typing <kbd>Option</kbd> + <kbd>-</kbd> (push <kbd>Option</kbd> at the
+same time as the <kbd>-</kbd> key) does the same in a Mac.</p>
+<h3 id="naming-objects" id="naming-objects-7" data-line="65" class="code-line">Naming Objects</h3>
+<p data-line="67" class="code-line">Objects can be given any name such as <code>x</code>, <code>current_temperature</code>, or
+<code>subject_id</code>. You want your object names to be explicit and not too long. They
+cannot start with a number (<code>2x</code> is not valid, but <code>x2</code> is). <strong>R is case sensitive</strong>
+(e.g., <code>age</code> is different from <code>Age</code>). There are some names that
+cannot be used because they are the names of fundamental functions in R (e.g.,
+<code>if</code>, <code>else</code>, <code>for</code>, see
+<a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/Reserved.html">here</a>
+for a complete list). In general, even if it's allowed, it's best to not use
+other function names (e.g., <code>c</code>, <code>T</code>, <code>mean</code>, <code>data</code>, <code>df</code>, <code>weights</code>). If in
+doubt, check the help to see if the name is already in use. It's also best to
+avoid dots (<code>.</code>) within an object name as in <code>my.dataset</code>. There are many
+functions in R with dots in their names for historical reasons, but because dots
+have a special meaning in R (for methods) and other programming languages, it's
+best to avoid them. It is also recommended to use nouns for object names, and
+verbs for function names. It's important to be consistent in the styling of your
+code (where you put spaces, how you name objects, etc.). Using a consistent
+coding style makes your code clearer to read for your future self and your
+collaborators. In R, three popular style guides are
+<a href="https://google.github.io/styleguide/Rguide.xml">Google's</a>, <a href="http://jef.works/R-style-guide/">Jean
+Fan's</a> and the
+<a href="http://style.tidyverse.org/">tidyverse's</a>. The tidyverse's is very
+comprehensive and may seem overwhelming at first. You can install the
+<a href="https://github.com/jimhester/lintr"><strong><code>lintr</code></strong></a> package to automatically check
+for issues in the styling of your code.</p>
+<p data-line="94" class="code-line">When assigning a value to an object, R does not print anything. You
+can force R to print the value by using parentheses or by typing
+the object name:</p>
+<pre><code data-line="99" class="code-line language-r"><div>area_hectares &lt;- <span class="hljs-number">1.0</span>    <span class="hljs-comment"># doesn't print anything</span>
+(area_hectares &lt;- <span class="hljs-number">1.0</span>)  <span class="hljs-comment"># putting parenthesis around the call prints the value of `area_hectares`</span>
+</div></code></pre>
+<pre><code data-line="107" class="code-line"><code><div>[1] 1
+</div></code></code></pre>
+<pre><code data-line="114" class="code-line language-r"><div>area_hectares         <span class="hljs-comment"># and so does typing the name of the object</span>
+</div></code></pre>
+<pre><code data-line="121" class="code-line"><code><div>[1] 1
+</div></code></code></pre>
+<p data-line="126" class="code-line">Now that R has <code>area_hectares</code> in memory, we can do arithmetic with it. For
+instance, we may want to convert this area into acres (area in acres is 2.47 times the area in hectares):</p>
+<pre><code data-line="130" class="code-line language-r"><div><span class="hljs-number">2.47</span> * area_hectares
+</div></code></pre>
+<pre><code data-line="135" class="code-line"><code><div>[1] 2.47
+</div></code></code></pre>
+<p data-line="140" class="code-line">We can also change an object's value by assigning it a new one:</p>
+<pre><code data-line="143" class="code-line language-r"><div>area_hectares &lt;- <span class="hljs-number">2.5</span>
+<span class="hljs-number">2.47</span> * area_hectares
+</div></code></pre>
+<pre><code data-line="149" class="code-line"><code><div>[1] 6.175
+</div></code></code></pre>
+<p data-line="154" class="code-line">This means that assigning a value to one object does not change the values of
+other objects  For example, let's store the plot's area in acres
+in a new object, <code>area_acres</code>:</p>
+<pre><code data-line="159" class="code-line language-r"><div>area_acres &lt;- <span class="hljs-number">2.47</span> * area_hectares
+</div></code></pre>
+<p data-line="164" class="code-line">and then change <code>area_hectares</code> to 50.</p>
+<pre><code data-line="167" class="code-line language-r"><div>area_hectares &lt;- <span class="hljs-number">50</span>
+</div></code></pre>
+<blockquote data-line="173" class="code-line">
+<h3 id="exercise" id="exercise-35" data-line="173" class="code-line">Exercise</h3>
+<p data-line="175" class="code-line">What do you think is the current content of the object <code>area_acres</code>? 123.5 or
+6.175?</p>
+</blockquote>
+<details> 
+<summary>
+<b>Solution</b>  - click me</summary>
+<p data-line="183" class="code-line">The value of <code>area_acres</code> is still 6.175 because you have not
+re-run the line <code>area_acres &lt;- 2.47 * area_hectares</code> since
+changing the value of <code>area_hectares</code>.</p>
+<br>
+<pre><code data-line="190" class="code-line language-r"><div>area_acres &lt;- <span class="hljs-number">2.47</span> * area_hectares
+area_acres
+</div></code></pre>
+</details>
+<h2 id="comments" id="comments-7" data-line="199" class="code-line">Comments</h2>
+<p data-line="201" class="code-line">All programming languages allow the programmer to include comments in their code. To do this in R we use the <code>#</code> character.
+Anything to the right of the <code>#</code> sign and up to the end of the line is treated as a comment and is ignored by R. You can start lines with comments
+or include them after any code on the line.</p>
+<pre><code data-line="207" class="code-line language-r"><div>area_hectares &lt;- <span class="hljs-number">1.0</span>			<span class="hljs-comment"># land area in hectares</span>
+area_acres &lt;- area_hectares * <span class="hljs-number">2.47</span>	<span class="hljs-comment"># convert to acres</span>
+area_acres				<span class="hljs-comment"># print land area in acres.</span>
+</div></code></pre>
+<pre><code data-line="216" class="code-line"><code><div>[1] 2.47
+</div></code></code></pre>
+<p data-line="219" class="code-line">{: .output}</p>
+<p data-line="221" class="code-line">RStudio makes it easy to comment or uncomment a paragraph: after selecting the
+lines you  want to comment, press at the same time on your keyboard
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>. If you only want to comment
+out one line, you can put the cursor at any location of that line (i.e. no need
+to select the whole line), then press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +
+<kbd>C</kbd>.</p>
+<blockquote data-line="229" class="code-line">
+<h2 id="exercise-2" id="exercise-36" data-line="229" class="code-line">Exercise</h2>
+<p data-line="231" class="code-line">Create two variables <code>length</code> and <code>width</code> and assign them values.
+Create a third variable <code>area</code> and give it a value based on the current values of <code>length</code> and <code>width</code>.
+Show that changing the values of either <code>length</code> and <code>width</code> does not affect the value of <code>area</code>.</p>
+<blockquote data-line="235" class="code-line">
+<h2 id="solution" id="solution-35" data-line="235" class="code-line">Solution</h2>
+<pre><code data-line="238" class="code-line"><code><div>length &lt;- 2.5
+width &lt;- 3.2
+area &lt;- length * width
+area
+</div></code></code></pre>
+<p data-line="244" class="code-line">{: .language-r}</p>
+<pre><code data-line="248" class="code-line"><code><div>[1] 8
+</div></code></code></pre>
+<p data-line="251" class="code-line">{: .output}</p>
+<pre><code data-line="255" class="code-line"><code><div># change the values of length and width
+length &lt;- 7.0
+width &lt;- 6.5
+# the value of area isn't changed
+area
+</div></code></code></pre>
+<p data-line="262" class="code-line">{: .language-r}</p>
+<pre><code data-line="266" class="code-line"><code><div>[1] 8
+</div></code></code></pre>
+<p data-line="269" class="code-line">{: .output}</p>
+</blockquote>
+<p data-line="271" class="code-line">{: .solution}
+{: .challenge}</p>
+</blockquote>
+<h3 id="functions-and-their-arguments" id="functions-and-their-arguments-7" data-line="275" class="code-line">Functions and their arguments</h3>
+<p data-line="277" class="code-line">Functions are &quot;canned scripts&quot; that automate more complicated sets of commands
+including operations assignments, etc. Many functions are predefined, or can be
+made available by importing R <em>packages</em> (more on that later). A function
+usually gets one or more inputs called <em>arguments</em>. Functions often (but not
+always) return a <em>value</em>. A typical example would be the function <code>sqrt()</code>. The
+input (the argument) must be a number, and the return value (in fact, the
+output) is the square root of that number. Executing a function ('running it')
+is called <em>calling</em> the function. An example of a function call is:</p>
+<pre><code data-line="287" class="code-line"><code><div>b &lt;- sqrt(a)
+</div></code></code></pre>
+<p data-line="290" class="code-line">{: .language-r}
+Here, the value of <code>a</code> is given to the <code>sqrt()</code> function, the <code>sqrt()</code> function
+calculates the square root, and returns the value which is then assigned to
+the object <code>b</code>. This function is very simple, because it takes just one argument.</p>
+<p data-line="295" class="code-line">The return 'value' of a function need not be numerical (like that of <code>sqrt()</code>),
+and it also does not need to be a single item: it can be a set of things, or
+even a dataset. We'll see that when we read data files into R.</p>
+<p data-line="299" class="code-line">Arguments can be anything, not only numbers or filenames, but also other
+objects. Exactly what each argument means differs per function, and must be
+looked up in the documentation (see below). Some functions take arguments which
+may either be specified by the user, or, if left out, take on a <em>default</em> value:
+these are called <em>options</em>. Options are typically used to alter the way the
+function operates, such as whether it ignores 'bad values', or what symbol to
+use in a plot.  However, if you want something specific, you can specify a value
+of your choice which will be used instead of the default.</p>
+<p data-line="308" class="code-line">Let's try a function that can take multiple arguments: <code>round()</code>.</p>
+<pre><code data-line="311" class="code-line"><code><div>round(3.14159)
+</div></code></code></pre>
+<p data-line="314" class="code-line">{: .language-r}</p>
+<pre><code data-line="318" class="code-line"><code><div>[1] 3
+</div></code></code></pre>
+<p data-line="321" class="code-line">{: .output}</p>
+<p data-line="324" class="code-line">Here, we've called <code>round()</code> with just one argument, <code>3.14159</code>, and it has
+returned the value <code>3</code>.  That's because the default is to round to the nearest
+whole number. If we want more digits we can see how to do that by getting
+information about the <code>round</code> function.  We can use <code>args(round)</code> or look at the
+help for this function using <code>?round</code>.</p>
+<pre><code data-line="331" class="code-line"><code><div>args(round)
+</div></code></code></pre>
+<p data-line="334" class="code-line">{: .language-r}</p>
+<pre><code data-line="338" class="code-line"><code><div>function (x, digits = 0) 
+NULL
+</div></code></code></pre>
+<p data-line="342" class="code-line">{: .output}</p>
+<pre><code data-line="345" class="code-line"><code><div>?round
+</div></code></code></pre>
+<p data-line="348" class="code-line">{: .language-r}</p>
+<p data-line="350" class="code-line">We see that if we want a different number of digits, we can
+type <code>digits=2</code> or however many we want.</p>
+<pre><code data-line="354" class="code-line"><code><div>round(3.14159, digits = 2)
+</div></code></code></pre>
+<p data-line="357" class="code-line">{: .language-r}</p>
+<pre><code data-line="361" class="code-line"><code><div>[1] 3.14
+</div></code></code></pre>
+<p data-line="364" class="code-line">{: .output}</p>
+<p data-line="366" class="code-line">If you provide the arguments in the exact same order as they are defined you
+don't have to name them:</p>
+<pre><code data-line="370" class="code-line"><code><div>round(3.14159, 2)
+</div></code></code></pre>
+<p data-line="373" class="code-line">{: .language-r}</p>
+<pre><code data-line="377" class="code-line"><code><div>[1] 3.14
+</div></code></code></pre>
+<p data-line="380" class="code-line">{: .output}</p>
+<p data-line="382" class="code-line">And if you do name the arguments, you can switch their order:</p>
+<pre><code data-line="385" class="code-line"><code><div>round(digits = 2, x = 3.14159)
+</div></code></code></pre>
+<p data-line="388" class="code-line">{: .language-r}</p>
+<pre><code data-line="392" class="code-line"><code><div>[1] 3.14
+</div></code></code></pre>
+<p data-line="395" class="code-line">{: .output}</p>
+<p data-line="397" class="code-line">It's good practice to put the non-optional arguments (like the number you're
+rounding) first in your function call, and to specify the names of all optional
+arguments.  If you don't, someone reading your code might have to look up the
+definition of a function with unfamiliar arguments to understand what you're
+doing.</p>
+<blockquote data-line="403" class="code-line">
+<h2 id="exercise-3" id="exercise-37" data-line="403" class="code-line">Exercise</h2>
+<p data-line="405" class="code-line">Type in <code>?round</code> at the console and then look at the output in the Help pane.
+What other functions exist that are similar to <code>round</code>?
+How do you use the <code>digits</code> parameter in the round function?
+{: .challenge}</p>
+</blockquote>
+<h2 id="vectors-and-data-types" id="vectors-and-data-types-7" data-line="410" class="code-line">Vectors and data types</h2>
+<p data-line="414" class="code-line">A vector is the most common and basic data type in R, and is pretty much
+the workhorse of R. A vector is composed by a series of values, which can be
+either numbers or characters. We can assign a series of values to a vector using
+the <code>c()</code> function. For example we can create a vector of household
+members for the households we've interviewed and assign
+it to a new object <code>no_membrs</code>:</p>
+<pre><code data-line="422" class="code-line"><code><div>no_membrs &lt;- c(3, 7, 10, 6)
+no_membrs
+</div></code></code></pre>
+<p data-line="426" class="code-line">{: .language-r}</p>
+<pre><code data-line="430" class="code-line"><code><div>[1]  3  7 10  6
+</div></code></code></pre>
+<p data-line="433" class="code-line">{: .output}</p>
+<p data-line="435" class="code-line">A vector can also contain characters. For example, we can have
+a vector of the building material used to construct our
+interview respondents' walls (<code>respondent_wall_type</code>):</p>
+<pre><code data-line="440" class="code-line"><code><div>respondent_wall_type &lt;- c(&quot;muddaub&quot;, &quot;burntbricks&quot;, &quot;sunbricks&quot;)
+respondent_wall_type
+</div></code></code></pre>
+<p data-line="444" class="code-line">{: .language-r}</p>
+<pre><code data-line="448" class="code-line"><code><div>[1] &quot;muddaub&quot;     &quot;burntbricks&quot; &quot;sunbricks&quot;  
+</div></code></code></pre>
+<p data-line="451" class="code-line">{: .output}</p>
+<p data-line="453" class="code-line">The quotes around &quot;muddaub&quot;, etc. are essential here. Without the quotes R
+will assume there are objects called <code>muddaub</code>, <code>burntbricks</code> and <code>sunbricks</code>. As these objects
+don't exist in R's memory, there will be an error message.</p>
+<p data-line="457" class="code-line">There are many functions that allow you to inspect the content of a
+vector. <code>length()</code> tells you how many elements are in a particular vector:</p>
+<pre><code data-line="461" class="code-line"><code><div>length(no_membrs)
+</div></code></code></pre>
+<p data-line="464" class="code-line">{: .language-r}</p>
+<pre><code data-line="468" class="code-line"><code><div>[1] 4
+</div></code></code></pre>
+<p data-line="471" class="code-line">{: .output}</p>
+<pre><code data-line="475" class="code-line"><code><div>length(respondent_wall_type)
+</div></code></code></pre>
+<p data-line="478" class="code-line">{: .language-r}</p>
+<pre><code data-line="482" class="code-line"><code><div>[1] 3
+</div></code></code></pre>
+<p data-line="485" class="code-line">{: .output}</p>
+<p data-line="487" class="code-line">An important feature of a vector, is that all of the elements are the same type of data.
+The function <code>class()</code> indicates the class (the type of element) of an object:</p>
+<pre><code data-line="491" class="code-line"><code><div>class(no_membrs)
+</div></code></code></pre>
+<p data-line="494" class="code-line">{: .language-r}</p>
+<pre><code data-line="498" class="code-line"><code><div>[1] &quot;numeric&quot;
+</div></code></code></pre>
+<p data-line="501" class="code-line">{: .output}</p>
+<pre><code data-line="505" class="code-line"><code><div>class(respondent_wall_type)
+</div></code></code></pre>
+<p data-line="508" class="code-line">{: .language-r}</p>
+<pre><code data-line="512" class="code-line"><code><div>[1] &quot;character&quot;
+</div></code></code></pre>
+<p data-line="515" class="code-line">{: .output}</p>
+<p data-line="517" class="code-line">The function <code>str()</code> provides an overview of the structure of an object and its
+elements. It is a useful function when working with large and complex
+objects:</p>
+<pre><code data-line="522" class="code-line"><code><div>str(no_membrs)
+</div></code></code></pre>
+<p data-line="525" class="code-line">{: .language-r}</p>
+<pre><code data-line="529" class="code-line"><code><div> num [1:4] 3 7 10 6
+</div></code></code></pre>
+<p data-line="532" class="code-line">{: .output}</p>
+<pre><code data-line="536" class="code-line"><code><div>str(respondent_wall_type)
+</div></code></code></pre>
+<p data-line="539" class="code-line">{: .language-r}</p>
+<pre><code data-line="543" class="code-line"><code><div> chr [1:3] &quot;muddaub&quot; &quot;burntbricks&quot; &quot;sunbricks&quot;
+</div></code></code></pre>
+<p data-line="546" class="code-line">{: .output}</p>
+<p data-line="548" class="code-line">You can use the <code>c()</code> function to add other elements to your vector:</p>
+<pre><code data-line="550" class="code-line"><code><div>possessions &lt;- c(&quot;bicycle&quot;, &quot;radio&quot;, &quot;television&quot;)
+possessions &lt;- c(possessions, &quot;mobile_phone&quot;) # add to the end of the vector
+possessions &lt;- c(&quot;car&quot;, possessions) # add to the beginning of the vector
+possessions
+</div></code></code></pre>
+<p data-line="556" class="code-line">{: .language-r}</p>
+<pre><code data-line="560" class="code-line"><code><div>[1] &quot;car&quot;          &quot;bicycle&quot;      &quot;radio&quot;        &quot;television&quot;  
+[5] &quot;mobile_phone&quot;
+</div></code></code></pre>
+<p data-line="564" class="code-line">{: .output}</p>
+<p data-line="566" class="code-line">In the first line, we take the original vector <code>possessions</code>,
+add the value <code>&quot;mobile_phone&quot;</code> to the end of it, and save the result back into
+<code>possessions</code>. Then we add the value <code>&quot;car&quot;</code> to the beginning, again saving the result
+back into <code>possessions</code>.</p>
+<p data-line="571" class="code-line">We can do this over and over again to grow a vector, or assemble a dataset.
+As we program, this may be useful to add results that we are collecting or
+calculating.</p>
+<p data-line="575" class="code-line">An <strong>atomic vector</strong> is the simplest R <strong>data type</strong> and is a linear vector of a single type. Above, we saw
+2 of the 6 main <strong>atomic vector</strong> types  that R
+uses: <code>&quot;character&quot;</code> and <code>&quot;numeric&quot;</code> (or <code>&quot;double&quot;</code>). These are the basic building blocks that
+all R objects are built from. The other 4 <strong>atomic vector</strong> types are:</p>
+<ul>
+<li data-line="580" class="code-line"><code>&quot;logical&quot;</code> for <code>TRUE</code> and <code>FALSE</code> (the boolean data type)</li>
+<li data-line="581" class="code-line"><code>&quot;integer&quot;</code> for integer numbers (e.g., <code>2L</code>, the <code>L</code> indicates to R that it's an integer)</li>
+<li data-line="582" class="code-line"><code>&quot;complex&quot;</code> to represent complex numbers with real and imaginary parts (e.g.,
+<code>1 + 4i</code>) and that's all we're going to say about them</li>
+<li data-line="584" class="code-line"><code>&quot;raw&quot;</code> for bitstreams that we won't discuss further</li>
+</ul>
+<p data-line="586" class="code-line">You can check the type of your vector using the <code>typeof()</code> function and inputting your vector as the argument.</p>
+<p data-line="588" class="code-line">Vectors are one of the many <strong>data structures</strong> that R uses. Other important
+ones are lists (<code>list</code>), matrices (<code>matrix</code>), data frames (<code>data.frame</code>),
+factors (<code>factor</code>) and arrays (<code>array</code>).</p>
+<blockquote data-line="592" class="code-line">
+<h2 id="exercise-4" id="exercise-38" data-line="592" class="code-line">Exercise</h2>
+<p data-line="595" class="code-line">We’ve seen that atomic vectors can be of type character, numeric (or double),
+integer, and logical. But what happens if we try to mix these types in a
+single vector?</p>
+<blockquote data-line="599" class="code-line">
+<h2 id="solution-2" id="solution-36" data-line="599" class="code-line">Solution</h2>
+<p data-line="601" class="code-line">R implicitly converts them to all be the same type.
+{: .solution}</p>
+</blockquote>
+<p data-line="604" class="code-line">What will happen in each of these examples? (hint: use <code>class()</code>
+to check the data type of your objects):</p>
+<pre><code data-line="608" class="code-line"><code><div>num_char &lt;- c(1, 2, 3, &quot;a&quot;)
+num_logical &lt;- c(1, 2, 3, TRUE)
+char_logical &lt;- c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, TRUE)
+tricky &lt;- c(1, 2, 3, &quot;4&quot;)
+</div></code></code></pre>
+<p data-line="614" class="code-line">{: .language-r}</p>
+<p data-line="617" class="code-line">Why do you think it happens?</p>
+<blockquote data-line="619" class="code-line">
+<h2 id="solution-3" id="solution-37" data-line="619" class="code-line">Solution</h2>
+<p data-line="621" class="code-line">Vectors can be of only one data type. R tries to
+convert (coerce) the content of this vector to find a &quot;common
+denominator&quot; that doesn't lose any information.
+{: .solution}</p>
+</blockquote>
+<p data-line="627" class="code-line">How many values in <code>combined_logical</code> are <code>&quot;TRUE&quot;</code> (as a character) in the
+following example:</p>
+<pre><code data-line="631" class="code-line"><code><div>num_logical &lt;- c(1, 2, 3, TRUE)
+char_logical &lt;- c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, TRUE)
+combined_logical &lt;- c(num_logical, char_logical)
+</div></code></code></pre>
+<p data-line="636" class="code-line">{: .language-r}
+ </p>
+<blockquote data-line="639" class="code-line">
+<h2 id="solution-4" id="solution-38" data-line="639" class="code-line">Solution</h2>
+<p data-line="641" class="code-line">Only one. There is no memory of past data types, and the coercion
+happens the
+first time the vector is evaluated. Therefore, the <code>TRUE</code> in
+<code>num_logical</code>
+gets converted into a <code>1</code> before it gets converted into <code>&quot;1&quot;</code> in
+<code>combined_logical</code>.
+{: .solution}</p>
+</blockquote>
+<p data-line="649" class="code-line">You've probably noticed that objects of different types get
+converted into a single, shared type within a vector. In R, we
+call converting objects from one class into another class
+<em>coercion</em>. These conversions happen according to a hierarchy,
+whereby some types get preferentially coerced into other
+types. Can you draw a diagram that represents the hierarchy of how
+these data types are coerced?</p>
+</blockquote>
+<p data-line="657" class="code-line">{: .challenge}</p>
+<h2 id="subsetting-vectors" id="subsetting-vectors-7" data-line="660" class="code-line">Subsetting vectors</h2>
+<p data-line="662" class="code-line">If we want to extract one or several values from a vector, we must provide one
+or several indices in square brackets. For instance:</p>
+<pre><code data-line="666" class="code-line"><code><div>respondent_wall_type &lt;- c(&quot;muddaub&quot;, &quot;burntbricks&quot;, &quot;sunbricks&quot;)
+respondent_wall_type[2]
+</div></code></code></pre>
+<p data-line="670" class="code-line">{: .language-r}</p>
+<pre><code data-line="674" class="code-line"><code><div>[1] &quot;burntbricks&quot;
+</div></code></code></pre>
+<p data-line="677" class="code-line">{: .output}</p>
+<pre><code data-line="681" class="code-line"><code><div>respondent_wall_type[c(3, 2)]
+</div></code></code></pre>
+<p data-line="684" class="code-line">{: .language-r}</p>
+<pre><code data-line="688" class="code-line"><code><div>[1] &quot;sunbricks&quot;   &quot;burntbricks&quot;
+</div></code></code></pre>
+<p data-line="691" class="code-line">{: .output}</p>
+<p data-line="693" class="code-line">We can also repeat the indices to create an object with more elements than the
+original one:</p>
+<pre><code data-line="697" class="code-line"><code><div>more_respondent_wall_type &lt;- respondent_wall_type[c(1, 2, 3, 2, 1, 3)]
+more_respondent_wall_type
+</div></code></code></pre>
+<p data-line="701" class="code-line">{: .language-r}</p>
+<pre><code data-line="705" class="code-line"><code><div>[1] &quot;muddaub&quot;     &quot;burntbricks&quot; &quot;sunbricks&quot;   &quot;burntbricks&quot; &quot;muddaub&quot;    
+[6] &quot;sunbricks&quot;  
+</div></code></code></pre>
+<p data-line="709" class="code-line">{: .output}</p>
+<p data-line="711" class="code-line">R indices start at 1. Programming languages like Fortran, MATLAB, Julia, and R
+start counting at 1, because that's what human beings typically do. Languages in
+the C family (including C++, Java, Perl, and Python) count from 0 because that's
+simpler for computers to do.</p>
+<h3 id="conditional-subsetting" id="conditional-subsetting-7" data-line="716" class="code-line">Conditional subsetting</h3>
+<p data-line="718" class="code-line">Another common way of subsetting is by using a logical vector. <code>TRUE</code> will
+select the element with the same index, while <code>FALSE</code> will not:</p>
+<pre><code data-line="722" class="code-line"><code><div>no_membrs &lt;- c(3, 7, 10, 6)
+no_membrs[c(TRUE, FALSE, TRUE, TRUE)]
+</div></code></code></pre>
+<p data-line="726" class="code-line">{: .language-r}</p>
+<pre><code data-line="730" class="code-line"><code><div>[1]  3 10  6
+</div></code></code></pre>
+<p data-line="733" class="code-line">{: .output}</p>
+<p data-line="735" class="code-line">Typically, these logical vectors are not typed by hand, but are the output of
+other functions or logical tests. For instance, if you wanted to select only the
+values above 5:</p>
+<pre><code data-line="740" class="code-line"><code><div>no_membrs &gt; 5    # will return logicals with TRUE for the indices that meet the condition
+</div></code></code></pre>
+<p data-line="743" class="code-line">{: .language-r}</p>
+<pre><code data-line="747" class="code-line"><code><div>[1] FALSE  TRUE  TRUE  TRUE
+</div></code></code></pre>
+<p data-line="750" class="code-line">{: .output}</p>
+<pre><code data-line="754" class="code-line"><code><div>## so we can use this to select only the values above 5
+no_membrs[no_membrs &gt; 5]
+</div></code></code></pre>
+<p data-line="758" class="code-line">{: .language-r}</p>
+<pre><code data-line="762" class="code-line"><code><div>[1]  7 10  6
+</div></code></code></pre>
+<p data-line="765" class="code-line">{: .output}</p>
+<p data-line="767" class="code-line">You can combine multiple tests using <code>&amp;</code> (both conditions are true, AND) or <code>|</code>
+(at least one of the conditions is true, OR):</p>
+<pre><code data-line="771" class="code-line"><code><div>no_membrs[no_membrs &lt; 3 | no_membrs &gt; 5]
+</div></code></code></pre>
+<p data-line="774" class="code-line">{: .language-r}</p>
+<pre><code data-line="778" class="code-line"><code><div>[1]  7 10  6
+</div></code></code></pre>
+<p data-line="781" class="code-line">{: .output}</p>
+<pre><code data-line="785" class="code-line"><code><div>no_membrs[no_membrs &gt;= 7 &amp; no_membrs == 3]
+</div></code></code></pre>
+<p data-line="788" class="code-line">{: .language-r}</p>
+<pre><code data-line="792" class="code-line"><code><div>numeric(0)
+</div></code></code></pre>
+<p data-line="795" class="code-line">{: .output}</p>
+<p data-line="797" class="code-line">Here, <code>&lt;</code> stands for &quot;less than&quot;, <code>&gt;</code> for &quot;greater than&quot;, <code>&gt;=</code> for &quot;greater than
+or equal to&quot;, and <code>==</code> for &quot;equal to&quot;. The double equal sign <code>==</code> is a test for
+numerical equality between the left and right hand sides, and should not be
+confused with the single <code>=</code> sign, which performs variable assignment (similar
+to <code>&lt;-</code>).</p>
+<p data-line="803" class="code-line">A common task is to search for certain strings in a vector.  One could use the
+&quot;or&quot; operator <code>|</code> to test for equality to multiple values, but this can quickly
+become tedious. The function <code>%in%</code> allows you to test if any of the elements of
+a search vector are found:</p>
+<pre><code data-line="809" class="code-line"><code><div>possessions &lt;- c(&quot;car&quot;, &quot;bicycle&quot;, &quot;radio&quot;, &quot;television&quot;, &quot;mobile_phone&quot;)
+possessions[possessions == &quot;car&quot; | possessions == &quot;bicycle&quot;] # returns both car and bicycle
+</div></code></code></pre>
+<p data-line="813" class="code-line">{: .language-r}</p>
+<pre><code data-line="817" class="code-line"><code><div>[1] &quot;car&quot;     &quot;bicycle&quot;
+</div></code></code></pre>
+<p data-line="820" class="code-line">{: .output}</p>
+<pre><code data-line="824" class="code-line"><code><div>possessions %in% c(&quot;car&quot;, &quot;bicycle&quot;, &quot;motorcycle&quot;, &quot;truck&quot;, &quot;boat&quot;)
+</div></code></code></pre>
+<p data-line="827" class="code-line">{: .language-r}</p>
+<pre><code data-line="831" class="code-line"><code><div>[1]  TRUE  TRUE FALSE FALSE FALSE
+</div></code></code></pre>
+<p data-line="834" class="code-line">{: .output}</p>
+<pre><code data-line="838" class="code-line"><code><div>possessions[possessions %in% c(&quot;car&quot;, &quot;bicycle&quot;, &quot;motorcycle&quot;, &quot;truck&quot;, &quot;boat&quot;)]
+</div></code></code></pre>
+<p data-line="841" class="code-line">{: .language-r}</p>
+<pre><code data-line="845" class="code-line"><code><div>[1] &quot;car&quot;     &quot;bicycle&quot;
+</div></code></code></pre>
+<p data-line="848" class="code-line">{: .output}</p>
+<h2 id="missing-data" id="missing-data-7" data-line="850" class="code-line">Missing data</h2>
+<p data-line="852" class="code-line">As R was designed to analyze datasets, it includes the concept of missing data
+(which is uncommon in other programming languages). Missing data are represented
+in vectors as <code>NA</code>.</p>
+<p data-line="856" class="code-line">When doing operations on numbers, most functions will return <code>NA</code> if the data
+you are working with include missing values. This feature
+makes it harder to overlook the cases where you are dealing with missing data.
+You can add the argument <code>na.rm=TRUE</code> to calculate the result while ignoring
+the missing values.</p>
+<pre><code data-line="863" class="code-line"><code><div>rooms &lt;- c(2, 1, 1, NA, 4)
+mean(rooms)
+</div></code></code></pre>
+<p data-line="867" class="code-line">{: .language-r}</p>
+<pre><code data-line="871" class="code-line"><code><div>[1] NA
+</div></code></code></pre>
+<p data-line="874" class="code-line">{: .output}</p>
+<pre><code data-line="878" class="code-line"><code><div>max(rooms)
+</div></code></code></pre>
+<p data-line="881" class="code-line">{: .language-r}</p>
+<pre><code data-line="885" class="code-line"><code><div>[1] NA
+</div></code></code></pre>
+<p data-line="888" class="code-line">{: .output}</p>
+<pre><code data-line="892" class="code-line"><code><div>mean(rooms, na.rm = TRUE)
+</div></code></code></pre>
+<p data-line="895" class="code-line">{: .language-r}</p>
+<pre><code data-line="899" class="code-line"><code><div>[1] 2
+</div></code></code></pre>
+<p data-line="902" class="code-line">{: .output}</p>
+<pre><code data-line="906" class="code-line"><code><div>max(rooms, na.rm = TRUE)
+</div></code></code></pre>
+<p data-line="909" class="code-line">{: .language-r}</p>
+<pre><code data-line="913" class="code-line"><code><div>[1] 4
+</div></code></code></pre>
+<p data-line="916" class="code-line">{: .output}</p>
+<p data-line="918" class="code-line">If your data include missing values, you may want to become familiar with the
+functions <code>is.na()</code>, <code>na.omit()</code>, and <code>complete.cases()</code>. See below for
+examples.</p>
+<pre><code data-line="924" class="code-line"><code><div>## Extract those elements which are not missing values.
+rooms[!is.na(rooms)]
+</div></code></code></pre>
+<p data-line="928" class="code-line">{: .language-r}</p>
+<pre><code data-line="932" class="code-line"><code><div>[1] 2 1 1 4
+</div></code></code></pre>
+<p data-line="935" class="code-line">{: .output}</p>
+<pre><code data-line="939" class="code-line"><code><div>## Returns the object with incomplete cases removed. The returned object is an atomic vector of type `&quot;numeric&quot;` (or `&quot;double&quot;`).
+na.omit(rooms)
+</div></code></code></pre>
+<p data-line="943" class="code-line">{: .language-r}</p>
+<pre><code data-line="947" class="code-line"><code><div>[1] 2 1 1 4
+attr(,&quot;na.action&quot;)
+[1] 4
+attr(,&quot;class&quot;)
+[1] &quot;omit&quot;
+</div></code></code></pre>
+<p data-line="954" class="code-line">{: .output}</p>
+<pre><code data-line="958" class="code-line"><code><div>## Extract those elements which are complete cases. The returned object is an atomic vector of type `&quot;numeric&quot;` (or `&quot;double&quot;`).
+rooms[complete.cases(rooms)]
+</div></code></code></pre>
+<p data-line="962" class="code-line">{: .language-r}</p>
+<pre><code data-line="966" class="code-line"><code><div>[1] 2 1 1 4
+</div></code></code></pre>
+<p data-line="969" class="code-line">{: .output}
+Recall that you can use the <code>typeof()</code> function to find the type of your atomic vector.</p>
+<blockquote data-line="972" class="code-line">
+<h2 id="exercise-5" id="exercise-39" data-line="972" class="code-line">Exercise</h2>
+<ol>
+<li data-line="974" class="code-line">
+<p data-line="974" class="code-line">Using this vector of rooms, create a new vector with the NAs removed.</p>
+<pre><code data-line="976" class="code-line language-r"><div>rooms &lt;- c(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-literal">NA</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">8</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-literal">NA</span>, <span class="hljs-number">1</span>)
+</div></code></pre>
+</li>
+<li data-line="979" class="code-line">
+<p data-line="979" class="code-line">Use the function <code>median()</code> to calculate the median of the <code>rooms</code> vector.</p>
+</li>
+<li data-line="981" class="code-line">
+<p data-line="981" class="code-line">Use R to figure out how many households in the set use more than 2 rooms for sleeping.</p>
+</li>
+</ol>
+<blockquote data-line="983" class="code-line">
+<h2 id="solution-5" id="solution-39" data-line="983" class="code-line">Solution</h2>
+<pre><code data-line="985" class="code-line"><code><div>rooms &lt;- c(1, 2, 1, 1, NA, 3, 1, 3, 2, 1, 1, 8, 3, 1, NA, 1)
+rooms_no_na &lt;- rooms[!is.na(rooms)]
+# or
+rooms_no_na &lt;- na.omit(rooms)
+# 2.
+median(rooms, na.rm = TRUE)
+</div></code></code></pre>
+<p data-line="993" class="code-line">{: .language-r}</p>
+<pre><code data-line="997" class="code-line"><code><div>[1] 1
+</div></code></code></pre>
+<p data-line="1000" class="code-line">{: .output}</p>
+<pre><code data-line="1004" class="code-line"><code><div># 3.
+rooms_above_2 &lt;- rooms_no_na[rooms_no_na &gt; 2]
+length(rooms_above_2)
+</div></code></code></pre>
+<p data-line="1009" class="code-line">{: .language-r}</p>
+<pre><code data-line="1013" class="code-line"><code><div>[1] 4
+</div></code></code></pre>
+<p data-line="1016" class="code-line">{: .output}
+{: .solution}
+{: .challenge}</p>
+</blockquote>
+</blockquote>
+<p data-line="1020" class="code-line">Now that we have learned how to write scripts, and the basics of R's data
+structures, we are ready to start working with the SAFI dataset we have been
+using in the other lessons, and learn about data frames.</p>
+<p data-line="1025" class="code-line">{% include <a href="http://links.md">links.md</a> %}</p>
+
+        <script>/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./preview-src/index.ts");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./node_modules/lodash.throttle/index.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash.throttle/index.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {/**
+ * lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+
+/** Used as the `TypeError` message for "Functions" methods. */
+var FUNC_ERROR_TEXT = 'Expected a function';
+
+/** Used as references for various `Number` constants. */
+var NAN = 0 / 0;
+
+/** `Object#toString` result references. */
+var symbolTag = '[object Symbol]';
+
+/** Used to match leading and trailing whitespace. */
+var reTrim = /^\s+|\s+$/g;
+
+/** Used to detect bad signed hexadecimal string values. */
+var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+
+/** Used to detect binary string values. */
+var reIsBinary = /^0b[01]+$/i;
+
+/** Used to detect octal string values. */
+var reIsOctal = /^0o[0-7]+$/i;
+
+/** Built-in method references without a dependency on `root`. */
+var freeParseInt = parseInt;
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max,
+    nativeMin = Math.min;
+
+/**
+ * Gets the timestamp of the number of milliseconds that have elapsed since
+ * the Unix epoch (1 January 1970 00:00:00 UTC).
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Date
+ * @returns {number} Returns the timestamp.
+ * @example
+ *
+ * _.defer(function(stamp) {
+ *   console.log(_.now() - stamp);
+ * }, _.now());
+ * // => Logs the number of milliseconds it took for the deferred invocation.
+ */
+var now = function() {
+  return root.Date.now();
+};
+
+/**
+ * Creates a debounced function that delays invoking `func` until after `wait`
+ * milliseconds have elapsed since the last time the debounced function was
+ * invoked. The debounced function comes with a `cancel` method to cancel
+ * delayed `func` invocations and a `flush` method to immediately invoke them.
+ * Provide `options` to indicate whether `func` should be invoked on the
+ * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
+ * with the last arguments provided to the debounced function. Subsequent
+ * calls to the debounced function return the result of the last `func`
+ * invocation.
+ *
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is
+ * invoked on the trailing edge of the timeout only if the debounced function
+ * is invoked more than once during the `wait` timeout.
+ *
+ * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+ * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+ *
+ * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+ * for details over the differences between `_.debounce` and `_.throttle`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to debounce.
+ * @param {number} [wait=0] The number of milliseconds to delay.
+ * @param {Object} [options={}] The options object.
+ * @param {boolean} [options.leading=false]
+ *  Specify invoking on the leading edge of the timeout.
+ * @param {number} [options.maxWait]
+ *  The maximum time `func` is allowed to be delayed before it's invoked.
+ * @param {boolean} [options.trailing=true]
+ *  Specify invoking on the trailing edge of the timeout.
+ * @returns {Function} Returns the new debounced function.
+ * @example
+ *
+ * // Avoid costly calculations while the window size is in flux.
+ * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
+ *
+ * // Invoke `sendMail` when clicked, debouncing subsequent calls.
+ * jQuery(element).on('click', _.debounce(sendMail, 300, {
+ *   'leading': true,
+ *   'trailing': false
+ * }));
+ *
+ * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
+ * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
+ * var source = new EventSource('/stream');
+ * jQuery(source).on('message', debounced);
+ *
+ * // Cancel the trailing debounced invocation.
+ * jQuery(window).on('popstate', debounced.cancel);
+ */
+function debounce(func, wait, options) {
+  var lastArgs,
+      lastThis,
+      maxWait,
+      result,
+      timerId,
+      lastCallTime,
+      lastInvokeTime = 0,
+      leading = false,
+      maxing = false,
+      trailing = true;
+
+  if (typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  wait = toNumber(wait) || 0;
+  if (isObject(options)) {
+    leading = !!options.leading;
+    maxing = 'maxWait' in options;
+    maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
+    trailing = 'trailing' in options ? !!options.trailing : trailing;
+  }
+
+  function invokeFunc(time) {
+    var args = lastArgs,
+        thisArg = lastThis;
+
+    lastArgs = lastThis = undefined;
+    lastInvokeTime = time;
+    result = func.apply(thisArg, args);
+    return result;
+  }
+
+  function leadingEdge(time) {
+    // Reset any `maxWait` timer.
+    lastInvokeTime = time;
+    // Start the timer for the trailing edge.
+    timerId = setTimeout(timerExpired, wait);
+    // Invoke the leading edge.
+    return leading ? invokeFunc(time) : result;
+  }
+
+  function remainingWait(time) {
+    var timeSinceLastCall = time - lastCallTime,
+        timeSinceLastInvoke = time - lastInvokeTime,
+        result = wait - timeSinceLastCall;
+
+    return maxing ? nativeMin(result, maxWait - timeSinceLastInvoke) : result;
+  }
+
+  function shouldInvoke(time) {
+    var timeSinceLastCall = time - lastCallTime,
+        timeSinceLastInvoke = time - lastInvokeTime;
+
+    // Either this is the first call, activity has stopped and we're at the
+    // trailing edge, the system time has gone backwards and we're treating
+    // it as the trailing edge, or we've hit the `maxWait` limit.
+    return (lastCallTime === undefined || (timeSinceLastCall >= wait) ||
+      (timeSinceLastCall < 0) || (maxing && timeSinceLastInvoke >= maxWait));
+  }
+
+  function timerExpired() {
+    var time = now();
+    if (shouldInvoke(time)) {
+      return trailingEdge(time);
+    }
+    // Restart the timer.
+    timerId = setTimeout(timerExpired, remainingWait(time));
+  }
+
+  function trailingEdge(time) {
+    timerId = undefined;
+
+    // Only invoke if we have `lastArgs` which means `func` has been
+    // debounced at least once.
+    if (trailing && lastArgs) {
+      return invokeFunc(time);
+    }
+    lastArgs = lastThis = undefined;
+    return result;
+  }
+
+  function cancel() {
+    if (timerId !== undefined) {
+      clearTimeout(timerId);
+    }
+    lastInvokeTime = 0;
+    lastArgs = lastCallTime = lastThis = timerId = undefined;
+  }
+
+  function flush() {
+    return timerId === undefined ? result : trailingEdge(now());
+  }
+
+  function debounced() {
+    var time = now(),
+        isInvoking = shouldInvoke(time);
+
+    lastArgs = arguments;
+    lastThis = this;
+    lastCallTime = time;
+
+    if (isInvoking) {
+      if (timerId === undefined) {
+        return leadingEdge(lastCallTime);
+      }
+      if (maxing) {
+        // Handle invocations in a tight loop.
+        timerId = setTimeout(timerExpired, wait);
+        return invokeFunc(lastCallTime);
+      }
+    }
+    if (timerId === undefined) {
+      timerId = setTimeout(timerExpired, wait);
+    }
+    return result;
+  }
+  debounced.cancel = cancel;
+  debounced.flush = flush;
+  return debounced;
+}
+
+/**
+ * Creates a throttled function that only invokes `func` at most once per
+ * every `wait` milliseconds. The throttled function comes with a `cancel`
+ * method to cancel delayed `func` invocations and a `flush` method to
+ * immediately invoke them. Provide `options` to indicate whether `func`
+ * should be invoked on the leading and/or trailing edge of the `wait`
+ * timeout. The `func` is invoked with the last arguments provided to the
+ * throttled function. Subsequent calls to the throttled function return the
+ * result of the last `func` invocation.
+ *
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is
+ * invoked on the trailing edge of the timeout only if the throttled function
+ * is invoked more than once during the `wait` timeout.
+ *
+ * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+ * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+ *
+ * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+ * for details over the differences between `_.throttle` and `_.debounce`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to throttle.
+ * @param {number} [wait=0] The number of milliseconds to throttle invocations to.
+ * @param {Object} [options={}] The options object.
+ * @param {boolean} [options.leading=true]
+ *  Specify invoking on the leading edge of the timeout.
+ * @param {boolean} [options.trailing=true]
+ *  Specify invoking on the trailing edge of the timeout.
+ * @returns {Function} Returns the new throttled function.
+ * @example
+ *
+ * // Avoid excessively updating the position while scrolling.
+ * jQuery(window).on('scroll', _.throttle(updatePosition, 100));
+ *
+ * // Invoke `renewToken` when the click event is fired, but not more than once every 5 minutes.
+ * var throttled = _.throttle(renewToken, 300000, { 'trailing': false });
+ * jQuery(element).on('click', throttled);
+ *
+ * // Cancel the trailing throttled invocation.
+ * jQuery(window).on('popstate', throttled.cancel);
+ */
+function throttle(func, wait, options) {
+  var leading = true,
+      trailing = true;
+
+  if (typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  if (isObject(options)) {
+    leading = 'leading' in options ? !!options.leading : leading;
+    trailing = 'trailing' in options ? !!options.trailing : trailing;
+  }
+  return debounce(func, wait, {
+    'leading': leading,
+    'maxWait': wait,
+    'trailing': trailing
+  });
+}
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return !!value && (type == 'object' || type == 'function');
+}
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return !!value && typeof value == 'object';
+}
+
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */
+function isSymbol(value) {
+  return typeof value == 'symbol' ||
+    (isObjectLike(value) && objectToString.call(value) == symbolTag);
+}
+
+/**
+ * Converts `value` to a number.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {number} Returns the number.
+ * @example
+ *
+ * _.toNumber(3.2);
+ * // => 3.2
+ *
+ * _.toNumber(Number.MIN_VALUE);
+ * // => 5e-324
+ *
+ * _.toNumber(Infinity);
+ * // => Infinity
+ *
+ * _.toNumber('3.2');
+ * // => 3.2
+ */
+function toNumber(value) {
+  if (typeof value == 'number') {
+    return value;
+  }
+  if (isSymbol(value)) {
+    return NAN;
+  }
+  if (isObject(value)) {
+    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
+    value = isObject(other) ? (other + '') : other;
+  }
+  if (typeof value != 'string') {
+    return value === 0 ? value : +value;
+  }
+  value = value.replace(reTrim, '');
+  var isBinary = reIsBinary.test(value);
+  return (isBinary || reIsOctal.test(value))
+    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
+    : (reIsBadHex.test(value) ? NAN : +value);
+}
+
+module.exports = throttle;
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./node_modules/webpack/buildin/global.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1, eval)("this");
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+
+/***/ "./preview-src/activeLineMarker.ts":
+/*!*****************************************!*\
+  !*** ./preview-src/activeLineMarker.ts ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+const scroll_sync_1 = __webpack_require__(/*! ./scroll-sync */ "./preview-src/scroll-sync.ts");
+class ActiveLineMarker {
+    onDidChangeTextEditorSelection(line) {
+        const { previous } = scroll_sync_1.getElementsForSourceLine(line);
+        this._update(previous && previous.element);
+    }
+    _update(before) {
+        this._unmarkActiveElement(this._current);
+        this._markActiveElement(before);
+        this._current = before;
+    }
+    _unmarkActiveElement(element) {
+        if (!element) {
+            return;
+        }
+        element.className = element.className.replace(/\bcode-active-line\b/g, '');
+    }
+    _markActiveElement(element) {
+        if (!element) {
+            return;
+        }
+        element.className += ' code-active-line';
+    }
+}
+exports.ActiveLineMarker = ActiveLineMarker;
+
+
+/***/ }),
+
+/***/ "./preview-src/events.ts":
+/*!*******************************!*\
+  !*** ./preview-src/events.ts ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+Object.defineProperty(exports, "__esModule", { value: true });
+function onceDocumentLoaded(f) {
+    if (document.readyState === 'loading' || document.readyState === 'uninitialized') {
+        document.addEventListener('DOMContentLoaded', f);
+    }
+    else {
+        f();
+    }
+}
+exports.onceDocumentLoaded = onceDocumentLoaded;
+
+
+/***/ }),
+
+/***/ "./preview-src/index.ts":
+/*!******************************!*\
+  !*** ./preview-src/index.ts ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+Object.defineProperty(exports, "__esModule", { value: true });
+const activeLineMarker_1 = __webpack_require__(/*! ./activeLineMarker */ "./preview-src/activeLineMarker.ts");
+const events_1 = __webpack_require__(/*! ./events */ "./preview-src/events.ts");
+const messaging_1 = __webpack_require__(/*! ./messaging */ "./preview-src/messaging.ts");
+const scroll_sync_1 = __webpack_require__(/*! ./scroll-sync */ "./preview-src/scroll-sync.ts");
+const settings_1 = __webpack_require__(/*! ./settings */ "./preview-src/settings.ts");
+const throttle = __webpack_require__(/*! lodash.throttle */ "./node_modules/lodash.throttle/index.js");
+let scrollDisabled = true;
+const marker = new activeLineMarker_1.ActiveLineMarker();
+const settings = settings_1.getSettings();
+const vscode = acquireVsCodeApi();
+// Set VS Code state
+let state = settings_1.getData('data-state');
+vscode.setState(state);
+const messaging = messaging_1.createPosterForVsCode(vscode);
+window.cspAlerter.setPoster(messaging);
+window.styleLoadingMonitor.setPoster(messaging);
+window.onload = () => {
+    updateImageSizes();
+};
+events_1.onceDocumentLoaded(() => {
+    if (settings.scrollPreviewWithEditor) {
+        setTimeout(() => {
+            // Try to scroll to fragment if available
+            if (state.fragment) {
+                const element = scroll_sync_1.getLineElementForFragment(state.fragment);
+                if (element) {
+                    scrollDisabled = true;
+                    scroll_sync_1.scrollToRevealSourceLine(element.line);
+                }
+            }
+            else {
+                const initialLine = +settings.line;
+                if (!isNaN(initialLine)) {
+                    scrollDisabled = true;
+                    scroll_sync_1.scrollToRevealSourceLine(initialLine);
+                }
+            }
+        }, 0);
+    }
+});
+const onUpdateView = (() => {
+    const doScroll = throttle((line) => {
+        scrollDisabled = true;
+        scroll_sync_1.scrollToRevealSourceLine(line);
+    }, 50);
+    return (line, settings) => {
+        if (!isNaN(line)) {
+            settings.line = line;
+            doScroll(line);
+        }
+    };
+})();
+let updateImageSizes = throttle(() => {
+    const imageInfo = [];
+    let images = document.getElementsByTagName('img');
+    if (images) {
+        let i;
+        for (i = 0; i < images.length; i++) {
+            const img = images[i];
+            if (img.classList.contains('loading')) {
+                img.classList.remove('loading');
+            }
+            imageInfo.push({
+                id: img.id,
+                height: img.height,
+                width: img.width
+            });
+        }
+        messaging.postMessage('cacheImageSizes', imageInfo);
+    }
+}, 50);
+window.addEventListener('resize', () => {
+    scrollDisabled = true;
+    updateImageSizes();
+}, true);
+window.addEventListener('message', event => {
+    if (event.data.source !== settings.source) {
+        return;
+    }
+    switch (event.data.type) {
+        case 'onDidChangeTextEditorSelection':
+            marker.onDidChangeTextEditorSelection(event.data.line);
+            break;
+        case 'updateView':
+            onUpdateView(event.data.line, settings);
+            break;
+    }
+}, false);
+document.addEventListener('dblclick', event => {
+    if (!settings.doubleClickToSwitchToEditor) {
+        return;
+    }
+    // Ignore clicks on links
+    for (let node = event.target; node; node = node.parentNode) {
+        if (node.tagName === 'A') {
+            return;
+        }
+    }
+    const offset = event.pageY;
+    const line = scroll_sync_1.getEditorLineNumberForPageOffset(offset);
+    if (typeof line === 'number' && !isNaN(line)) {
+        messaging.postMessage('didClick', { line: Math.floor(line) });
+    }
+});
+document.addEventListener('click', event => {
+    if (!event) {
+        return;
+    }
+    let node = event.target;
+    while (node) {
+        if (node.tagName && node.tagName === 'A' && node.href) {
+            if (node.getAttribute('href').startsWith('#')) {
+                break;
+            }
+            if (node.href.startsWith('file://') || node.href.startsWith('vscode-resource:') || node.href.startsWith(settings.webviewResourceRoot)) {
+                const [path, fragment] = node.href.replace(/^(file:\/\/|vscode-resource:)/i, '').replace(new RegExp(`^${escapeRegExp(settings.webviewResourceRoot)}`)).split('#');
+                messaging.postMessage('clickLink', { path, fragment });
+                event.preventDefault();
+                event.stopPropagation();
+                break;
+            }
+            break;
+        }
+        node = node.parentNode;
+    }
+}, true);
+if (settings.scrollEditorWithPreview) {
+    window.addEventListener('scroll', throttle(() => {
+        if (scrollDisabled) {
+            scrollDisabled = false;
+        }
+        else {
+            const line = scroll_sync_1.getEditorLineNumberForPageOffset(window.scrollY);
+            if (typeof line === 'number' && !isNaN(line)) {
+                messaging.postMessage('revealLine', { line });
+                state.line = line;
+                vscode.setState(state);
+            }
+        }
+    }, 50));
+}
+function escapeRegExp(text) {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+}
+
+
+/***/ }),
+
+/***/ "./preview-src/messaging.ts":
+/*!**********************************!*\
+  !*** ./preview-src/messaging.ts ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+Object.defineProperty(exports, "__esModule", { value: true });
+const settings_1 = __webpack_require__(/*! ./settings */ "./preview-src/settings.ts");
+exports.createPosterForVsCode = (vscode) => {
+    return new class {
+        postMessage(type, body) {
+            vscode.postMessage({
+                type,
+                source: settings_1.getSettings().source,
+                body
+            });
+        }
+    };
+};
+
+
+/***/ }),
+
+/***/ "./preview-src/scroll-sync.ts":
+/*!************************************!*\
+  !*** ./preview-src/scroll-sync.ts ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+Object.defineProperty(exports, "__esModule", { value: true });
+const settings_1 = __webpack_require__(/*! ./settings */ "./preview-src/settings.ts");
+function clamp(min, max, value) {
+    return Math.min(max, Math.max(min, value));
+}
+function clampLine(line) {
+    return clamp(0, settings_1.getSettings().lineCount - 1, line);
+}
+const getCodeLineElements = (() => {
+    let elements;
+    return () => {
+        if (!elements) {
+            elements = [{ element: document.body, line: 0 }];
+            for (const element of document.getElementsByClassName('code-line')) {
+                const line = +element.getAttribute('data-line');
+                if (!isNaN(line)) {
+                    elements.push({ element: element, line });
+                }
+            }
+        }
+        return elements;
+    };
+})();
+/**
+ * Find the html elements that map to a specific target line in the editor.
+ *
+ * If an exact match, returns a single element. If the line is between elements,
+ * returns the element prior to and the element after the given line.
+ */
+function getElementsForSourceLine(targetLine) {
+    const lineNumber = Math.floor(targetLine);
+    const lines = getCodeLineElements();
+    let previous = lines[0] || null;
+    for (const entry of lines) {
+        if (entry.line === lineNumber) {
+            return { previous: entry, next: undefined };
+        }
+        else if (entry.line > lineNumber) {
+            return { previous, next: entry };
+        }
+        previous = entry;
+    }
+    return { previous };
+}
+exports.getElementsForSourceLine = getElementsForSourceLine;
+/**
+ * Find the html elements that are at a specific pixel offset on the page.
+ */
+function getLineElementsAtPageOffset(offset) {
+    const lines = getCodeLineElements();
+    const position = offset - window.scrollY;
+    let lo = -1;
+    let hi = lines.length - 1;
+    while (lo + 1 < hi) {
+        const mid = Math.floor((lo + hi) / 2);
+        const bounds = lines[mid].element.getBoundingClientRect();
+        if (bounds.top + bounds.height >= position) {
+            hi = mid;
+        }
+        else {
+            lo = mid;
+        }
+    }
+    const hiElement = lines[hi];
+    const hiBounds = hiElement.element.getBoundingClientRect();
+    if (hi >= 1 && hiBounds.top > position) {
+        const loElement = lines[lo];
+        return { previous: loElement, next: hiElement };
+    }
+    return { previous: hiElement };
+}
+exports.getLineElementsAtPageOffset = getLineElementsAtPageOffset;
+/**
+ * Attempt to reveal the element for a source line in the editor.
+ */
+function scrollToRevealSourceLine(line) {
+    if (!settings_1.getSettings().scrollPreviewWithEditor) {
+        return;
+    }
+    if (line <= 0) {
+        window.scroll(window.scrollX, 0);
+        return;
+    }
+    const { previous, next } = getElementsForSourceLine(line);
+    if (!previous) {
+        return;
+    }
+    let scrollTo = 0;
+    const rect = previous.element.getBoundingClientRect();
+    const previousTop = rect.top;
+    if (next && next.line !== previous.line) {
+        // Between two elements. Go to percentage offset between them.
+        const betweenProgress = (line - previous.line) / (next.line - previous.line);
+        const elementOffset = next.element.getBoundingClientRect().top - previousTop;
+        scrollTo = previousTop + betweenProgress * elementOffset;
+    }
+    else {
+        const progressInElement = line - Math.floor(line);
+        scrollTo = previousTop + (rect.height * progressInElement);
+    }
+    window.scroll(window.scrollX, Math.max(1, window.scrollY + scrollTo));
+}
+exports.scrollToRevealSourceLine = scrollToRevealSourceLine;
+function getEditorLineNumberForPageOffset(offset) {
+    const { previous, next } = getLineElementsAtPageOffset(offset);
+    if (previous) {
+        const previousBounds = previous.element.getBoundingClientRect();
+        const offsetFromPrevious = (offset - window.scrollY - previousBounds.top);
+        if (next) {
+            const progressBetweenElements = offsetFromPrevious / (next.element.getBoundingClientRect().top - previousBounds.top);
+            const line = previous.line + progressBetweenElements * (next.line - previous.line);
+            return clampLine(line);
+        }
+        else {
+            const progressWithinElement = offsetFromPrevious / (previousBounds.height);
+            const line = previous.line + progressWithinElement;
+            return clampLine(line);
+        }
+    }
+    return null;
+}
+exports.getEditorLineNumberForPageOffset = getEditorLineNumberForPageOffset;
+/**
+ * Try to find the html element by using a fragment id
+ */
+function getLineElementForFragment(fragment) {
+    return getCodeLineElements().find((element) => {
+        return element.element.id === fragment;
+    });
+}
+exports.getLineElementForFragment = getLineElementForFragment;
+
+
+/***/ }),
+
+/***/ "./preview-src/settings.ts":
+/*!*********************************!*\
+  !*** ./preview-src/settings.ts ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+Object.defineProperty(exports, "__esModule", { value: true });
+let cachedSettings = undefined;
+function getData(key) {
+    const element = document.getElementById('vscode-markdown-preview-data');
+    if (element) {
+        const data = element.getAttribute(key);
+        if (data) {
+            return JSON.parse(data);
+        }
+    }
+    throw new Error(`Could not load data for ${key}`);
+}
+exports.getData = getData;
+function getSettings() {
+    if (cachedSettings) {
+        return cachedSettings;
+    }
+    cachedSettings = getData('data-settings');
+    if (cachedSettings) {
+        return cachedSettings;
+    }
+    throw new Error('Could not load settings');
+}
+exports.getSettings = getSettings;
+
+
+/***/ })
+
+/******/ });
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vd2VicGFjay9ib290c3RyYXAiLCJ3ZWJwYWNrOi8vLy4vbm9kZV9tb2R1bGVzL2xvZGFzaC50aHJvdHRsZS9pbmRleC5qcyIsIndlYnBhY2s6Ly8vKHdlYnBhY2spL2J1aWxkaW4vZ2xvYmFsLmpzIiwid2VicGFjazovLy8uL3ByZXZpZXctc3JjL2FjdGl2ZUxpbmVNYXJrZXIudHMiLCJ3ZWJwYWNrOi8vLy4vcHJldmlldy1zcmMvZXZlbnRzLnRzIiwid2VicGFjazovLy8uL3ByZXZpZXctc3JjL2luZGV4LnRzIiwid2VicGFjazovLy8uL3ByZXZpZXctc3JjL21lc3NhZ2luZy50cyIsIndlYnBhY2s6Ly8vLi9wcmV2aWV3LXNyYy9zY3JvbGwtc3luYy50cyIsIndlYnBhY2s6Ly8vLi9wcmV2aWV3LXNyYy9zZXR0aW5ncy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUE7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7OztBQUdBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGFBQUs7QUFDTDtBQUNBOztBQUVBO0FBQ0E7QUFDQSx5REFBaUQsY0FBYztBQUMvRDs7QUFFQTtBQUNBO0FBQ0E7QUFDQSxtQ0FBMkIsMEJBQTBCLEVBQUU7QUFDdkQseUNBQWlDLGVBQWU7QUFDaEQ7QUFDQTtBQUNBOztBQUVBO0FBQ0EsOERBQXNELCtEQUErRDs7QUFFckg7QUFDQTs7O0FBR0E7QUFDQTs7Ozs7Ozs7Ozs7O0FDbkVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNB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SSxDQUFDLEtBQUssQ0FBQyxJQUFJLENBQUMsQ0FBQztTQUN4QjtLQUNEO0lBRUQsTUFBTSxJQUFJLEtBQUssQ0FBQywyQkFBMkIsR0FBRyxFQUFFLENBQUMsQ0FBQztBQUNuRCxDQUFDO0FBVkQsMEJBVUM7QUFFRCxTQUFnQixXQUFXO0lBQzFCLElBQUksY0FBYyxFQUFFO1FBQ25CLE9BQU8sY0FBYyxDQUFDO0tBQ3RCO0lBRUQsY0FBYyxHQUFHLE9BQU8sQ0FBQyxlQUFlLENBQUMsQ0FBQztJQUMxQyxJQUFJLGNBQWMsRUFBRTtRQUNuQixPQUFPLGNBQWMsQ0FBQztLQUN0QjtJQUVELE1BQU0sSUFBSSxLQUFLLENBQUMseUJBQXlCLENBQUMsQ0FBQztBQUM1QyxDQUFDO0FBWEQsa0NBV0MiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyIgXHQvLyBUaGUgbW9kdWxlIGNhY2hlXG4gXHR2YXIgaW5zdGFsbGVkTW9kdWxlcyA9IHt9O1xuXG4gXHQvLyBUaGUgcmVxdWlyZSBmdW5jdGlvblxuIFx0ZnVuY3Rpb24gX193ZWJwYWNrX3JlcXVpcmVfXyhtb2R1bGVJZCkge1xuXG4gXHRcdC8vIENoZWNrIGlmIG1vZHVsZSBpcyBpbiBjYWNoZVxuIFx0XHRpZihpbnN0YWxsZWRNb2R1bGVzW21vZHVsZUlkXSkge1xuIFx0XHRcdHJldHVybiBpbnN0YWxsZWRNb2R1bGVzW21vZHVsZUlkXS5leHBvcnRzO1xuIFx0XHR9XG4gXHRcdC8vIENyZWF0ZSBhIG5ldyBtb2R1bGUgKGFuZCBwdXQgaXQgaW50byB0aGUgY2FjaGUpXG4gXHRcdHZhciBtb2R1bGUgPSBpbnN0YWxsZWRNb2R1bGVzW21vZHVsZUlkXSA9IHtcbiBcdFx0XHRpOiBtb2R1bGVJZCxcbiBcdFx0XHRsOiBmYWxzZSxcbiBcdFx0XHRleHBvcnRzOiB7fVxuIFx0XHR9O1xuXG4gXHRcdC8vIEV4ZWN1dGUgdGhlIG1vZHVsZSBmdW5jdGlvblxuIFx0XHRtb2R1bGVzW21vZHVsZUlkXS5jYWxsKG1vZHVsZS5leHBvcnRzLCBtb2R1bGUsIG1vZHVsZS5leHBvcnRzLCBfX3dlYnBhY2tfcmVxdWlyZV9fKTtcblxuIFx0XHQvLyBGbGFnIHRoZSBtb2R1bGUgYXMgbG9hZGVkXG4gXHRcdG1vZHVsZS5sID0gdHJ1ZTtcblxuIFx0XHQvLyBSZXR1cm4gdGhlIGV4cG9ydHMgb2YgdGhlIG1vZHVsZVxuIFx0XHRyZXR1cm4gbW9kdWxlLmV4cG9ydHM7XG4gXHR9XG5cblxuIFx0Ly8gZXhwb3NlIHRoZSBtb2R1bGVzIG9iamVjdCAoX193ZWJwYWNrX21vZHVsZXNfXylcbiBcdF9fd2VicGFja19yZXF1aXJlX18ubSA9IG1vZHVsZXM7XG5cbiBcdC8vIGV4cG9zZSB0aGUgbW9kdWxlIGNhY2hlXG4gXHRfX3dlYnBhY2tfcmVxdWlyZV9fLmMgPSBpbnN0YWxsZWRNb2R1bGVzO1xuXG4gXHQvLyBkZWZpbmUgZ2V0dGVyIGZ1bmN0aW9uIGZvciBoYXJtb255IGV4cG9ydHNcbiBcdF9fd2VicGFja19yZXF1aXJlX18uZCA9IGZ1bmN0aW9uKGV4cG9ydHMsIG5hbWUsIGdldHRlcikge1xuIFx0XHRpZighX193ZWJwYWNrX3JlcXVpcmVfXy5vKGV4cG9ydHMsIG5hbWUpKSB7XG4gXHRcdFx0T2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsIG5hbWUsIHtcbiBcdFx0XHRcdGNvbmZpZ3VyYWJsZTogZmFsc2UsXG4gXHRcdFx0XHRlbnVtZXJhYmxlOiB0cnVlLFxuIFx0XHRcdFx0Z2V0OiBnZXR0ZXJcbiBcdFx0XHR9KTtcbiBcdFx0fVxuIFx0fTtcblxuIFx0Ly8gZGVmaW5lIF9fZXNNb2R1bGUgb24gZXhwb3J0c1xuIFx0X193ZWJwYWNrX3JlcXVpcmVfXy5yID0gZnVuY3Rpb24oZXhwb3J0cykge1xuIFx0XHRPYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgJ19fZXNNb2R1bGUnLCB7IHZhbHVlOiB0cnVlIH0pO1xuIFx0fTtcblxuIFx0Ly8gZ2V0RGVmYXVsdEV4cG9ydCBmdW5jdGlvbiBmb3IgY29tcGF0aWJpbGl0eSB3aXRoIG5vbi1oYXJtb255IG1vZHVsZXNcbiBcdF9fd2VicGFja19yZXF1aXJlX18ubiA9IGZ1bmN0aW9uKG1vZHVsZSkge1xuIFx0XHR2YXIgZ2V0dGVyID0gbW9kdWxlICYmIG1vZHVsZS5fX2VzTW9kdWxlID9cbiBcdFx0XHRmdW5jdGlvbiBnZXREZWZhdWx0KCkgeyByZXR1cm4gbW9kdWxlWydkZWZhdWx0J107IH0gOlxuIFx0XHRcdGZ1bmN0aW9uIGdldE1vZHVsZUV4cG9ydHMoKSB7IHJldHVybiBtb2R1bGU7IH07XG4gXHRcdF9fd2VicGFja19yZXF1aXJlX18uZChnZXR0ZXIsICdhJywgZ2V0dGVyKTtcbiBcdFx0cmV0dXJuIGdldHRlcjtcbiBcdH07XG5cbiBcdC8vIE9iamVjdC5wcm90b3R5cGUuaGFzT3duUHJvcGVydHkuY2FsbFxuIFx0X193ZWJwYWNrX3JlcXVpcmVfXy5vID0gZnVuY3Rpb24ob2JqZWN0LCBwcm9wZXJ0eSkgeyByZXR1cm4gT2JqZWN0LnByb3RvdHlwZS5oYXNPd25Qcm9wZXJ0eS5jYWxsKG9iamVjdCwgcHJvcGVydHkpOyB9O1xuXG4gXHQvLyBfX3dlYnBhY2tfcHVibGljX3BhdGhfX1xuIFx0X193ZWJwYWNrX3JlcXVpcmVfXy5wID0gXCJcIjtcblxuXG4gXHQvLyBMb2FkIGVudHJ5IG1vZHVsZSBhbmQgcmV0dXJuIGV4cG9ydHNcbiBcdHJldHVybiBfX3dlYnBhY2tfcmVxdWlyZV9fKF9fd2VicGFja19yZXF1aXJlX18ucyA9IFwiLi9wcmV2aWV3LXNyYy9pbmRleC50c1wiKTtcbiIsIi8qKlxuICogbG9kYXNoIChDdXN0b20gQnVpbGQpIDxodHRwczovL2xvZGFzaC5jb20vPlxuICogQnVpbGQ6IGBsb2Rhc2ggbW9kdWxhcml6ZSBleHBvcnRzPVwibnBtXCIgLW8gLi9gXG4gKiBDb3B5cmlnaHQgalF1ZXJ5IEZvdW5kYXRpb24gYW5kIG90aGVyIGNvbnRyaWJ1dG9ycyA8aHR0cHM6Ly9qcXVlcnkub3JnLz5cbiAqIFJlbGVhc2VkIHVuZGVyIE1JVCBsaWNlbnNlIDxodHRwczovL2xvZGFzaC5jb20vbGljZW5zZT5cbiAqIEJhc2VkIG9uIFVuZGVyc2NvcmUuanMgMS44LjMgPGh0dHA6Ly91bmRlcnNjb3JlanMub3JnL0xJQ0VOU0U+XG4gKiBDb3B5cmlnaHQgSmVyZW15IEFzaGtlbmFzLCBEb2N1bWVudENsb3VkIGFuZCBJbnZlc3RpZ2F0aXZlIFJlcG9ydGVycyAmIEVkaXRvcnNcbiAqL1xuXG4vKiogVXNlZCBhcyB0aGUgYFR5cGVFcnJvcmAgbWVzc2FnZSBmb3IgXCJGdW5jdGlvbnNcIiBtZXRob2RzLiAqL1xudmFyIEZVTkNfRVJST1JfVEVYVCA9ICdFeHBlY3RlZCBhIGZ1bmN0aW9uJztcblxuLyoqIFVzZWQgYXMgcmVmZXJlbmNlcyBmb3IgdmFyaW91cyBgTnVtYmVyYCBjb25zdGFudHMuICovXG52YXIgTkFOID0gMCAvIDA7XG5cbi8qKiBgT2JqZWN0I3RvU3RyaW5nYCByZXN1bHQgcmVmZXJlbmNlcy4gKi9cbnZhciBzeW1ib2xUYWcgPSAnW29iamVjdCBTeW1ib2xdJztcblxuLyoqIFVzZWQgdG8gbWF0Y2ggbGVhZGluZyBhbmQgdHJhaWxpbmcgd2hpdGVzcGFjZS4gKi9cbnZhciByZVRyaW0gPSAvXlxccyt8XFxzKyQvZztcblxuLyoqIFVzZWQgdG8gZGV0ZWN0IGJhZCBzaWduZWQgaGV4YWRlY2ltYWwgc3RyaW5nIHZhbHVlcy4gKi9cbnZhciByZUlzQmFkSGV4ID0gL15bLStdMHhbMC05YS1mXSskL2k7XG5cbi8qKiBVc2VkIHRvIGRldGVjdCBiaW5hcnkgc3RyaW5nIHZhbHVlcy4gKi9cbnZhciByZUlzQmluYXJ5ID0gL14wYlswMV0rJC9pO1xuXG4vKiogVXNlZCB0byBkZXRlY3Qgb2N0YWwgc3RyaW5nIHZhbHVlcy4gKi9cbnZhciByZUlzT2N0YWwgPSAvXjBvWzAtN10rJC9pO1xuXG4vKiogQnVpbHQtaW4gbWV0aG9kIHJlZmVyZW5jZXMgd2l0aG91dCBhIGRlcGVuZGVuY3kgb24gYHJvb3RgLiAqL1xudmFyIGZyZWVQYXJzZUludCA9IHBhcnNlSW50O1xuXG4vKiogRGV0ZWN0IGZyZWUgdmFyaWFibGUgYGdsb2JhbGAgZnJvbSBOb2RlLmpzLiAqL1xudmFyIGZyZWVHbG9iYWwgPSB0eXBlb2YgZ2xvYmFsID09ICdvYmplY3QnICYmIGdsb2JhbCAmJiBnbG9iYWwuT2JqZWN0ID09PSBPYmplY3QgJiYgZ2xvYmFsO1xuXG4vKiogRGV0ZWN0IGZyZWUgdmFyaWFibGUgYHNlbGZgLiAqL1xudmFyIGZyZWVTZWxmID0gdHlwZW9mIHNlbGYgPT0gJ29iamVjdCcgJiYgc2VsZiAmJiBzZWxmLk9iamVjdCA9PT0gT2JqZWN0ICYmIHNlbGY7XG5cbi8qKiBVc2VkIGFzIGEgcmVmZXJlbmNlIHRvIHRoZSBnbG9iYWwgb2JqZWN0LiAqL1xudmFyIHJvb3QgPSBmcmVlR2xvYmFsIHx8IGZyZWVTZWxmIHx8IEZ1bmN0aW9uKCdyZXR1cm4gdGhpcycpKCk7XG5cbi8qKiBVc2VkIGZvciBidWlsdC1pbiBtZXRob2QgcmVmZXJlbmNlcy4gKi9cbnZhciBvYmplY3RQcm90byA9IE9iamVjdC5wcm90b3R5cGU7XG5cbi8qKlxuICogVXNlZCB0byByZXNvbHZlIHRoZVxuICogW2B0b1N0cmluZ1RhZ2BdKGh0dHA6Ly9lY21hLWludGVybmF0aW9uYWwub3JnL2VjbWEtMjYyLzcuMC8jc2VjLW9iamVjdC5wcm90b3R5cGUudG9zdHJpbmcpXG4gKiBvZiB2YWx1ZXMuXG4gKi9cbnZhciBvYmplY3RUb1N0cmluZyA9IG9iamVjdFByb3RvLnRvU3RyaW5nO1xuXG4vKiBCdWlsdC1pbiBtZXRob2QgcmVmZXJlbmNlcyBmb3IgdGhvc2Ugd2l0aCB0aGUgc2FtZSBuYW1lIGFzIG90aGVyIGBsb2Rhc2hgIG1ldGhvZHMuICovXG52YXIgbmF0aXZlTWF4ID0gTWF0aC5tYXgsXG4gICAgbmF0aXZlTWluID0gTWF0aC5taW47XG5cbi8qKlxuICogR2V0cyB0aGUgdGltZXN0YW1wIG9mIHRoZSBudW1iZXIgb2YgbWlsbGlzZWNvbmRzIHRoYXQgaGF2ZSBlbGFwc2VkIHNpbmNlXG4gKiB0aGUgVW5peCBlcG9jaCAoMSBKYW51YXJ5IDE5NzAgMDA6MDA6MDAgVVRDKS5cbiAqXG4gKiBAc3RhdGljXG4gKiBAbWVtYmVyT2YgX1xuICogQHNpbmNlIDIuNC4wXG4gKiBAY2F0ZWdvcnkgRGF0ZVxuICogQHJldHVybnMge251bWJlcn0gUmV0dXJucyB0aGUgdGltZXN0YW1wLlxuICogQGV4YW1wbGVcbiAqXG4gKiBfLmRlZmVyKGZ1bmN0aW9uKHN0YW1wKSB7XG4gKiAgIGNvbnNvbGUubG9nKF8ubm93KCkgLSBzdGFtcCk7XG4gKiB9LCBfLm5vdygpKTtcbiAqIC8vID0+IExvZ3MgdGhlIG51bWJlciBvZiBtaWxsaXNlY29uZHMgaXQgdG9vayBmb3IgdGhlIGRlZmVycmVkIGludm9jYXRpb24uXG4gKi9cbnZhciBub3cgPSBmdW5jdGlvbigpIHtcbiAgcmV0dXJuIHJvb3QuRGF0ZS5ub3coKTtcbn07XG5cbi8qKlxuICogQ3JlYXRlcyBhIGRlYm91bmNlZCBmdW5jdGlvbiB0aGF0IGRlbGF5cyBpbnZva2luZyBgZnVuY2AgdW50aWwgYWZ0ZXIgYHdhaXRgXG4gKiBtaWxsaXNlY29uZHMgaGF2ZSBlbGFwc2VkIHNpbmNlIHRoZSBsYXN0IHRpbWUgdGhlIGRlYm91bmNlZCBmdW5jdGlvbiB3YXNcbiAqIGludm9rZWQuIFRoZSBkZWJvdW5jZWQgZnVuY3Rpb24gY29tZXMgd2l0aCBhIGBjYW5jZWxgIG1ldGhvZCB0byBjYW5jZWxcbiAqIGRlbGF5ZWQgYGZ1bmNgIGludm9jYXRpb25zIGFuZCBhIGBmbHVzaGAgbWV0aG9kIHRvIGltbWVkaWF0ZWx5IGludm9rZSB0aGVtLlxuICogUHJvdmlkZSBgb3B0aW9uc2AgdG8gaW5kaWNhdGUgd2hldGhlciBgZnVuY2Agc2hvdWxkIGJlIGludm9rZWQgb24gdGhlXG4gKiBsZWFkaW5nIGFuZC9vciB0cmFpbGluZyBlZGdlIG9mIHRoZSBgd2FpdGAgdGltZW91dC4gVGhlIGBmdW5jYCBpcyBpbnZva2VkXG4gKiB3aXRoIHRoZSBsYXN0IGFyZ3VtZW50cyBwcm92aWRlZCB0byB0aGUgZGVib3VuY2VkIGZ1bmN0aW9uLiBTdWJzZXF1ZW50XG4gKiBjYWxscyB0byB0aGUgZGVib3VuY2VkIGZ1bmN0aW9uIHJldHVybiB0aGUgcmVzdWx0IG9mIHRoZSBsYXN0IGBmdW5jYFxuICogaW52b2NhdGlvbi5cbiAqXG4gKiAqKk5vdGU6KiogSWYgYGxlYWRpbmdgIGFuZCBgdHJhaWxpbmdgIG9wdGlvbnMgYXJlIGB0cnVlYCwgYGZ1bmNgIGlzXG4gKiBpbnZva2VkIG9uIHRoZSB0cmFpbGluZyBlZGdlIG9mIHRoZSB0aW1lb3V0IG9ubHkgaWYgdGhlIGRlYm91bmNlZCBmdW5jdGlvblxuICogaXMgaW52b2tlZCBtb3JlIHRoYW4gb25jZSBkdXJpbmcgdGhlIGB3YWl0YCB0aW1lb3V0LlxuICpcbiAqIElmIGB3YWl0YCBpcyBgMGAgYW5kIGBsZWFkaW5nYCBpcyBgZmFsc2VgLCBgZnVuY2AgaW52b2NhdGlvbiBpcyBkZWZlcnJlZFxuICogdW50aWwgdG8gdGhlIG5leHQgdGljaywgc2ltaWxhciB0byBgc2V0VGltZW91dGAgd2l0aCBhIHRpbWVvdXQgb2YgYDBgLlxuICpcbiAqIFNlZSBbRGF2aWQgQ29yYmFjaG8ncyBhcnRpY2xlXShodHRwczovL2Nzcy10cmlja3MuY29tL2RlYm91bmNpbmctdGhyb3R0bGluZy1leHBsYWluZWQtZXhhbXBsZXMvKVxuICogZm9yIGRldGFpbHMgb3ZlciB0aGUgZGlmZmVyZW5jZXMgYmV0d2VlbiBgXy5kZWJvdW5jZWAgYW5kIGBfLnRocm90dGxlYC5cbiAqXG4gKiBAc3RhdGljXG4gKiBAbWVtYmVyT2YgX1xuICogQHNpbmNlIDAuMS4wXG4gKiBAY2F0ZWdvcnkgRnVuY3Rpb25cbiAqIEBwYXJhbSB7RnVuY3Rpb259IGZ1bmMgVGhlIGZ1bmN0aW9uIHRvIGRlYm91bmNlLlxuICogQHBhcmFtIHtudW1iZXJ9IFt3YWl0PTBdIFRoZSBudW1iZXIgb2YgbWlsbGlzZWNvbmRzIHRvIGRlbGF5LlxuICogQHBhcmFtIHtPYmplY3R9IFtvcHRpb25zPXt9XSBUaGUgb3B0aW9ucyBvYmplY3QuXG4gKiBAcGFyYW0ge2Jvb2xlYW59IFtvcHRpb25zLmxlYWRpbmc9ZmFsc2VdXG4gKiAgU3BlY2lmeSBpbnZva2luZyBvbiB0aGUgbGVhZGluZyBlZGdlIG9mIHRoZSB0aW1lb3V0LlxuICogQHBhcmFtIHtudW1iZXJ9IFtvcHRpb25zLm1heFdhaXRdXG4gKiAgVGhlIG1heGltdW0gdGltZSBgZnVuY2AgaXMgYWxsb3dlZCB0byBiZSBkZWxheWVkIGJlZm9yZSBpdCdzIGludm9rZWQuXG4gKiBAcGFyYW0ge2Jvb2xlYW59IFtvcHRpb25zLnRyYWlsaW5nPXRydWVdXG4gKiAgU3BlY2lmeSBpbnZva2luZyBvbiB0aGUgdHJhaWxpbmcgZWRnZSBvZiB0aGUgdGltZW91dC5cbiAqIEByZXR1cm5zIHtGdW5jdGlvbn0gUmV0dXJucyB0aGUgbmV3IGRlYm91bmNlZCBmdW5jdGlvbi5cbiAqIEBleGFtcGxlXG4gKlxuICogLy8gQXZvaWQgY29zdGx5IGNhbGN1bGF0aW9ucyB3aGlsZSB0aGUgd2luZG93IHNpemUgaXMgaW4gZmx1eC5cbiAqIGpRdWVyeSh3aW5kb3cpLm9uKCdyZXNpemUnLCBfLmRlYm91bmNlKGNhbGN1bGF0ZUxheW91dCwgMTUwKSk7XG4gKlxuICogLy8gSW52b2tlIGBzZW5kTWFpbGAgd2hlbiBjbGlja2VkLCBkZWJvdW5jaW5nIHN1YnNlcXVlbnQgY2FsbHMuXG4gKiBqUXVlcnkoZWxlbWVudCkub24oJ2NsaWNrJywgXy5kZWJvdW5jZShzZW5kTWFpbCwgMzAwLCB7XG4gKiAgICdsZWFkaW5nJzogdHJ1ZSxcbiAqICAgJ3RyYWlsaW5nJzogZmFsc2VcbiAqIH0pKTtcbiAqXG4gKiAvLyBFbnN1cmUgYGJhdGNoTG9nYCBpcyBpbnZva2VkIG9uY2UgYWZ0ZXIgMSBzZWNvbmQgb2YgZGVib3VuY2VkIGNhbGxzLlxuICogdmFyIGRlYm91bmNlZCA9IF8uZGVib3VuY2UoYmF0Y2hMb2csIDI1MCwgeyAnbWF4V2FpdCc6IDEwMDAgfSk7XG4gKiB2YXIgc291cmNlID0gbmV3IEV2ZW50U291cmNlKCcvc3RyZWFtJyk7XG4gKiBqUXVlcnkoc291cmNlKS5vbignbWVzc2FnZScsIGRlYm91bmNlZCk7XG4gKlxuICogLy8gQ2FuY2VsIHRoZSB0cmFpbGluZyBkZWJvdW5jZWQgaW52b2NhdGlvbi5cbiAqIGpRdWVyeSh3aW5kb3cpLm9uKCdwb3BzdGF0ZScsIGRlYm91bmNlZC5jYW5jZWwpO1xuICovXG5mdW5jdGlvbiBkZWJvdW5jZShmdW5jLCB3YWl0LCBvcHRpb25zKSB7XG4gIHZhciBsYXN0QXJncyxcbiAgICAgIGxhc3RUaGlzLFxuICAgICAgbWF4V2FpdCxcbiAgICAgIHJlc3VsdCxcbiAgICAgIHRpbWVySWQsXG4gICAgICBsYXN0Q2FsbFRpbWUsXG4gICAgICBsYXN0SW52b2tlVGltZSA9IDAsXG4gICAgICBsZWFkaW5nID0gZmFsc2UsXG4gICAgICBtYXhpbmcgPSBmYWxzZSxcbiAgICAgIHRyYWlsaW5nID0gdHJ1ZTtcblxuICBpZiAodHlwZW9mIGZ1bmMgIT0gJ2Z1bmN0aW9uJykge1xuICAgIHRocm93IG5ldyBUeXBlRXJyb3IoRlVOQ19FUlJPUl9URVhUKTtcbiAgfVxuICB3YWl0ID0gdG9OdW1iZXIod2FpdCkgfHwgMDtcbiAgaWYgKGlzT2JqZWN0KG9wdGlvbnMpKSB7XG4gICAgbGVhZGluZyA9ICEhb3B0aW9ucy5sZWFkaW5nO1xuICAgIG1heGluZyA9ICdtYXhXYWl0JyBpbiBvcHRpb25zO1xuICAgIG1heFdhaXQgPSBtYXhpbmcgPyBuYXRpdmVNYXgodG9OdW1iZXIob3B0aW9ucy5tYXhXYWl0KSB8fCAwLCB3YWl0KSA6IG1heFdhaXQ7XG4gICAgdHJhaWxpbmcgPSAndHJhaWxpbmcnIGluIG9wdGlvbnMgPyAhIW9wdGlvbnMudHJhaWxpbmcgOiB0cmFpbGluZztcbiAgfVxuXG4gIGZ1bmN0aW9uIGludm9rZUZ1bmModGltZSkge1xuICAgIHZhciBhcmdzID0gbGFzdEFyZ3MsXG4gICAgICAgIHRoaXNBcmcgPSBsYXN0VGhpcztcblxuICAgIGxhc3RBcmdzID0gbGFzdFRoaXMgPSB1bmRlZmluZWQ7XG4gICAgbGFzdEludm9rZVRpbWUgPSB0aW1lO1xuICAgIHJlc3VsdCA9IGZ1bmMuYXBwbHkodGhpc0FyZywgYXJncyk7XG4gICAgcmV0dXJuIHJlc3VsdDtcbiAgfVxuXG4gIGZ1bmN0aW9uIGxlYWRpbmdFZGdlKHRpbWUpIHtcbiAgICAvLyBSZXNldCBhbnkgYG1heFdhaXRgIHRpbWVyLlxuICAgIGxhc3RJbnZva2VUaW1lID0gdGltZTtcbiAgICAvLyBTdGFydCB0aGUgdGltZXIgZm9yIHRoZSB0cmFpbGluZyBlZGdlLlxuICAgIHRpbWVySWQgPSBzZXRUaW1lb3V0KHRpbWVyRXhwaXJlZCwgd2FpdCk7XG4gICAgLy8gSW52b2tlIHRoZSBsZWFkaW5nIGVkZ2UuXG4gICAgcmV0dXJuIGxlYWRpbmcgPyBpbnZva2VGdW5jKHRpbWUpIDogcmVzdWx0O1xuICB9XG5cbiAgZnVuY3Rpb24gcmVtYWluaW5nV2FpdCh0aW1lKSB7XG4gICAgdmFyIHRpbWVTaW5jZUxhc3RDYWxsID0gdGltZSAtIGxhc3RDYWxsVGltZSxcbiAgICAgICAgdGltZVNpbmNlTGFzdEludm9rZSA9IHRpbWUgLSBsYXN0SW52b2tlVGltZSxcbiAgICAgICAgcmVzdWx0ID0gd2FpdCAtIHRpbWVTaW5jZUxhc3RDYWxsO1xuXG4gICAgcmV0dXJuIG1heGluZyA/IG5hdGl2ZU1pbihyZXN1bHQsIG1heFdhaXQgLSB0aW1lU2luY2VMYXN0SW52b2tlKSA6IHJlc3VsdDtcbiAgfVxuXG4gIGZ1bmN0aW9uIHNob3VsZEludm9rZSh0aW1lKSB7XG4gICAgdmFyIHRpbWVTaW5jZUxhc3RDYWxsID0gdGltZSAtIGxhc3RDYWxsVGltZSxcbiAgICAgICAgdGltZVNpbmNlTGFzdEludm9rZSA9IHRpbWUgLSBsYXN0SW52b2tlVGltZTtcblxuICAgIC8vIEVpdGhlciB0aGlzIGlzIHRoZSBmaXJzdCBjYWxsLCBhY3Rpdml0eSBoYXMgc3RvcHBlZCBhbmQgd2UncmUgYXQgdGhlXG4gICAgLy8gdHJhaWxpbmcgZWRnZSwgdGhlIHN5c3RlbSB0aW1lIGhhcyBnb25lIGJhY2t3YXJkcyBhbmQgd2UncmUgdHJlYXRpbmdcbiAgICAvLyBpdCBhcyB0aGUgdHJhaWxpbmcgZWRnZSwgb3Igd2UndmUgaGl0IHRoZSBgbWF4V2FpdGAgbGltaXQuXG4gICAgcmV0dXJuIChsYXN0Q2FsbFRpbWUgPT09IHVuZGVmaW5lZCB8fCAodGltZVNpbmNlTGFzdENhbGwgPj0gd2FpdCkgfHxcbiAgICAgICh0aW1lU2luY2VMYXN0Q2FsbCA8IDApIHx8IChtYXhpbmcgJiYgdGltZVNpbmNlTGFzdEludm9rZSA+PSBtYXhXYWl0KSk7XG4gIH1cblxuICBmdW5jdGlvbiB0aW1lckV4cGlyZWQoKSB7XG4gICAgdmFyIHRpbWUgPSBub3coKTtcbiAgICBpZiAoc2hvdWxkSW52b2tlKHRpbWUpKSB7XG4gICAgICByZXR1cm4gdHJhaWxpbmdFZGdlKHRpbWUpO1xuICAgIH1cbiAgICAvLyBSZXN0YXJ0IHRoZSB0aW1lci5cbiAgICB0aW1lcklkID0gc2V0VGltZW91dCh0aW1lckV4cGlyZWQsIHJlbWFpbmluZ1dhaXQodGltZSkpO1xuICB9XG5cbiAgZnVuY3Rpb24gdHJhaWxpbmdFZGdlKHRpbWUpIHtcbiAgICB0aW1lcklkID0gdW5kZWZpbmVkO1xuXG4gICAgLy8gT25seSBpbnZva2UgaWYgd2UgaGF2ZSBgbGFzdEFyZ3NgIHdoaWNoIG1lYW5zIGBmdW5jYCBoYXMgYmVlblxuICAgIC8vIGRlYm91bmNlZCBhdCBsZWFzdCBvbmNlLlxuICAgIGlmICh0cmFpbGluZyAmJiBsYXN0QXJncykge1xuICAgICAgcmV0dXJuIGludm9rZUZ1bmModGltZSk7XG4gICAgfVxuICAgIGxhc3RBcmdzID0gbGFzdFRoaXMgPSB1bmRlZmluZWQ7XG4gICAgcmV0dXJuIHJlc3VsdDtcbiAgfVxuXG4gIGZ1bmN0aW9uIGNhbmNlbCgpIHtcbiAgICBpZiAodGltZXJJZCAhPT0gdW5kZWZpbmVkKSB7XG4gICAgICBjbGVhclRpbWVvdXQodGltZXJJZCk7XG4gICAgfVxuICAgIGxhc3RJbnZva2VUaW1lID0gMDtcbiAgICBsYXN0QXJncyA9IGxhc3RDYWxsVGltZSA9IGxhc3RUaGlzID0gdGltZXJJZCA9IHVuZGVmaW5lZDtcbiAgfVxuXG4gIGZ1bmN0aW9uIGZsdXNoKCkge1xuICAgIHJldHVybiB0aW1lcklkID09PSB1bmRlZmluZWQgPyByZXN1bHQgOiB0cmFpbGluZ0VkZ2Uobm93KCkpO1xuICB9XG5cbiAgZnVuY3Rpb24gZGVib3VuY2VkKCkge1xuICAgIHZhciB0aW1lID0gbm93KCksXG4gICAgICAgIGlzSW52b2tpbmcgPSBzaG91bGRJbnZva2UodGltZSk7XG5cbiAgICBsYXN0QXJncyA9IGFyZ3VtZW50cztcbiAgICBsYXN0VGhpcyA9IHRoaXM7XG4gICAgbGFzdENhbGxUaW1lID0gdGltZTtcblxuICAgIGlmIChpc0ludm9raW5nKSB7XG4gICAgICBpZiAodGltZXJJZCA9PT0gdW5kZWZpbmVkKSB7XG4gICAgICAgIHJldHVybiBsZWFkaW5nRWRnZShsYXN0Q2FsbFRpbWUpO1xuICAgICAgfVxuICAgICAgaWYgKG1heGluZykge1xuICAgICAgICAvLyBIYW5kbGUgaW52b2NhdGlvbnMgaW4gYSB0aWdodCBsb29wLlxuICAgICAgICB0aW1lcklkID0gc2V0VGltZW91dCh0aW1lckV4cGlyZWQsIHdhaXQpO1xuICAgICAgICByZXR1cm4gaW52b2tlRnVuYyhsYXN0Q2FsbFRpbWUpO1xuICAgICAgfVxuICAgIH1cbiAgICBpZiAodGltZXJJZCA9PT0gdW5kZWZpbmVkKSB7XG4gICAgICB0aW1lcklkID0gc2V0VGltZW91dCh0aW1lckV4cGlyZWQsIHdhaXQpO1xuICAgIH1cbiAgICByZXR1cm4gcmVzdWx0O1xuICB9XG4gIGRlYm91bmNlZC5jYW5jZWwgPSBjYW5jZWw7XG4gIGRlYm91bmNlZC5mbHVzaCA9IGZsdXNoO1xuICByZXR1cm4gZGVib3VuY2VkO1xufVxuXG4vKipcbiAqIENyZWF0ZXMgYSB0aHJvdHRsZWQgZnVuY3Rpb24gdGhhdCBvbmx5IGludm9rZXMgYGZ1bmNgIGF0IG1vc3Qgb25jZSBwZXJcbiAqIGV2ZXJ5IGB3YWl0YCBtaWxsaXNlY29uZHMuIFRoZSB0aHJvdHRsZWQgZnVuY3Rpb24gY29tZXMgd2l0aCBhIGBjYW5jZWxgXG4gKiBtZXRob2QgdG8gY2FuY2VsIGRlbGF5ZWQgYGZ1bmNgIGludm9jYXRpb25zIGFuZCBhIGBmbHVzaGAgbWV0aG9kIHRvXG4gKiBpbW1lZGlhdGVseSBpbnZva2UgdGhlbS4gUHJvdmlkZSBgb3B0aW9uc2AgdG8gaW5kaWNhdGUgd2hldGhlciBgZnVuY2BcbiAqIHNob3VsZCBiZSBpbnZva2VkIG9uIHRoZSBsZWFkaW5nIGFuZC9vciB0cmFpbGluZyBlZGdlIG9mIHRoZSBgd2FpdGBcbiAqIHRpbWVvdXQuIFRoZSBgZnVuY2AgaXMgaW52b2tlZCB3aXRoIHRoZSBsYXN0IGFyZ3VtZW50cyBwcm92aWRlZCB0byB0aGVcbiAqIHRocm90dGxlZCBmdW5jdGlvbi4gU3Vic2VxdWVudCBjYWxscyB0byB0aGUgdGhyb3R0bGVkIGZ1bmN0aW9uIHJldHVybiB0aGVcbiAqIHJlc3VsdCBvZiB0aGUgbGFzdCBgZnVuY2AgaW52b2NhdGlvbi5cbiAqXG4gKiAqKk5vdGU6KiogSWYgYGxlYWRpbmdgIGFuZCBgdHJhaWxpbmdgIG9wdGlvbnMgYXJlIGB0cnVlYCwgYGZ1bmNgIGlzXG4gKiBpbnZva2VkIG9uIHRoZSB0cmFpbGluZyBlZGdlIG9mIHRoZSB0aW1lb3V0IG9ubHkgaWYgdGhlIHRocm90dGxlZCBmdW5jdGlvblxuICogaXMgaW52b2tlZCBtb3JlIHRoYW4gb25jZSBkdXJpbmcgdGhlIGB3YWl0YCB0aW1lb3V0LlxuICpcbiAqIElmIGB3YWl0YCBpcyBgMGAgYW5kIGBsZWFkaW5nYCBpcyBgZmFsc2VgLCBgZnVuY2AgaW52b2NhdGlvbiBpcyBkZWZlcnJlZFxuICogdW50aWwgdG8gdGhlIG5leHQgdGljaywgc2ltaWxhciB0byBgc2V0VGltZW91dGAgd2l0aCBhIHRpbWVvdXQgb2YgYDBgLlxuICpcbiAqIFNlZSBbRGF2aWQgQ29yYmFjaG8ncyBhcnRpY2xlXShodHRwczovL2Nzcy10cmlja3MuY29tL2RlYm91bmNpbmctdGhyb3R0bGluZy1leHBsYWluZWQtZXhhbXBsZXMvKVxuICogZm9yIGRldGFpbHMgb3ZlciB0aGUgZGlmZmVyZW5jZXMgYmV0d2VlbiBgXy50aHJvdHRsZWAgYW5kIGBfLmRlYm91bmNlYC5cbiAqXG4gKiBAc3RhdGljXG4gKiBAbWVtYmVyT2YgX1xuICogQHNpbmNlIDAuMS4wXG4gKiBAY2F0ZWdvcnkgRnVuY3Rpb25cbiAqIEBwYXJhbSB7RnVuY3Rpb259IGZ1bmMgVGhlIGZ1bmN0aW9uIHRvIHRocm90dGxlLlxuICogQHBhcmFtIHtudW1iZXJ9IFt3YWl0PTBdIFRoZSBudW1iZXIgb2YgbWlsbGlzZWNvbmRzIHRvIHRocm90dGxlIGludm9jYXRpb25zIHRvLlxuICogQHBhcmFtIHtPYmplY3R9IFtvcHRpb25zPXt9XSBUaGUgb3B0aW9ucyBvYmplY3QuXG4gKiBAcGFyYW0ge2Jvb2xlYW59IFtvcHRpb25zLmxlYWRpbmc9dHJ1ZV1cbiAqICBTcGVjaWZ5IGludm9raW5nIG9uIHRoZSBsZWFkaW5nIGVkZ2Ugb2YgdGhlIHRpbWVvdXQuXG4gKiBAcGFyYW0ge2Jvb2xlYW59IFtvcHRpb25zLnRyYWlsaW5nPXRydWVdXG4gKiAgU3BlY2lmeSBpbnZva2luZyBvbiB0aGUgdHJhaWxpbmcgZWRnZSBvZiB0aGUgdGltZW91dC5cbiAqIEByZXR1cm5zIHtGdW5jdGlvbn0gUmV0dXJucyB0aGUgbmV3IHRocm90dGxlZCBmdW5jdGlvbi5cbiAqIEBleGFtcGxlXG4gKlxuICogLy8gQXZvaWQgZXhjZXNzaXZlbHkgdXBkYXRpbmcgdGhlIHBvc2l0aW9uIHdoaWxlIHNjcm9sbGluZy5cbiAqIGpRdWVyeSh3aW5kb3cpLm9uKCdzY3JvbGwnLCBfLnRocm90dGxlKHVwZGF0ZVBvc2l0aW9uLCAxMDApKTtcbiAqXG4gKiAvLyBJbnZva2UgYHJlbmV3VG9rZW5gIHdoZW4gdGhlIGNsaWNrIGV2ZW50IGlzIGZpcmVkLCBidXQgbm90IG1vcmUgdGhhbiBvbmNlIGV2ZXJ5IDUgbWludXRlcy5cbiAqIHZhciB0aHJvdHRsZWQgPSBfLnRocm90dGxlKHJlbmV3VG9rZW4sIDMwMDAwMCwgeyAndHJhaWxpbmcnOiBmYWxzZSB9KTtcbiAqIGpRdWVyeShlbGVtZW50KS5vbignY2xpY2snLCB0aHJvdHRsZWQpO1xuICpcbiAqIC8vIENhbmNlbCB0aGUgdHJhaWxpbmcgdGhyb3R0bGVkIGludm9jYXRpb24uXG4gKiBqUXVlcnkod2luZG93KS5vbigncG9wc3RhdGUnLCB0aHJvdHRsZWQuY2FuY2VsKTtcbiAqL1xuZnVuY3Rpb24gdGhyb3R0bGUoZnVuYywgd2FpdCwgb3B0aW9ucykge1xuICB2YXIgbGVhZGluZyA9IHRydWUsXG4gICAgICB0cmFpbGluZyA9IHRydWU7XG5cbiAgaWYgKHR5cGVvZiBmdW5jICE9ICdmdW5jdGlvbicpIHtcbiAgICB0aHJvdyBuZXcgVHlwZUVycm9yKEZVTkNfRVJST1JfVEVYVCk7XG4gIH1cbiAgaWYgKGlzT2JqZWN0KG9wdGlvbnMpKSB7XG4gICAgbGVhZGluZyA9ICdsZWFkaW5nJyBpbiBvcHRpb25zID8gISFvcHRpb25zLmxlYWRpbmcgOiBsZWFkaW5nO1xuICAgIHRyYWlsaW5nID0gJ3RyYWlsaW5nJyBpbiBvcHRpb25zID8gISFvcHRpb25zLnRyYWlsaW5nIDogdHJhaWxpbmc7XG4gIH1cbiAgcmV0dXJuIGRlYm91bmNlKGZ1bmMsIHdhaXQsIHtcbiAgICAnbGVhZGluZyc6IGxlYWRpbmcsXG4gICAgJ21heFdhaXQnOiB3YWl0LFxuICAgICd0cmFpbGluZyc6IHRyYWlsaW5nXG4gIH0pO1xufVxuXG4vKipcbiAqIENoZWNrcyBpZiBgdmFsdWVgIGlzIHRoZVxuICogW2xhbmd1YWdlIHR5cGVdKGh0dHA6Ly93d3cuZWNtYS1pbnRlcm5hdGlvbmFsLm9yZy9lY21hLTI2Mi83LjAvI3NlYy1lY21hc2NyaXB0LWxhbmd1YWdlLXR5cGVzKVxuICogb2YgYE9iamVjdGAuIChlLmcuIGFycmF5cywgZnVuY3Rpb25zLCBvYmplY3RzLCByZWdleGVzLCBgbmV3IE51bWJlcigwKWAsIGFuZCBgbmV3IFN0cmluZygnJylgKVxuICpcbiAqIEBzdGF0aWNcbiAqIEBtZW1iZXJPZiBfXG4gKiBAc2luY2UgMC4xLjBcbiAqIEBjYXRlZ29yeSBMYW5nXG4gKiBAcGFyYW0geyp9IHZhbHVlIFRoZSB2YWx1ZSB0byBjaGVjay5cbiAqIEByZXR1cm5zIHtib29sZWFufSBSZXR1cm5zIGB0cnVlYCBpZiBgdmFsdWVgIGlzIGFuIG9iamVjdCwgZWxzZSBgZmFsc2VgLlxuICogQGV4YW1wbGVcbiAqXG4gKiBfLmlzT2JqZWN0KHt9KTtcbiAqIC8vID0+IHRydWVcbiAqXG4gKiBfLmlzT2JqZWN0KFsxLCAyLCAzXSk7XG4gKiAvLyA9PiB0cnVlXG4gKlxuICogXy5pc09iamVjdChfLm5vb3ApO1xuICogLy8gPT4gdHJ1ZVxuICpcbiAqIF8uaXNPYmplY3QobnVsbCk7XG4gKiAvLyA9PiBmYWxzZVxuICovXG5mdW5jdGlvbiBpc09iamVjdCh2YWx1ZSkge1xuICB2YXIgdHlwZSA9IHR5cGVvZiB2YWx1ZTtcbiAgcmV0dXJuICEhdmFsdWUgJiYgKHR5cGUgPT0gJ29iamVjdCcgfHwgdHlwZSA9PSAnZnVuY3Rpb24nKTtcbn1cblxuLyoqXG4gKiBDaGVja3MgaWYgYHZhbHVlYCBpcyBvYmplY3QtbGlrZS4gQSB2YWx1ZSBpcyBvYmplY3QtbGlrZSBpZiBpdCdzIG5vdCBgbnVsbGBcbiAqIGFuZCBoYXMgYSBgdHlwZW9mYCByZXN1bHQgb2YgXCJvYmplY3RcIi5cbiAqXG4gKiBAc3RhdGljXG4gKiBAbWVtYmVyT2YgX1xuICogQHNpbmNlIDQuMC4wXG4gKiBAY2F0ZWdvcnkgTGFuZ1xuICogQHBhcmFtIHsqfSB2YWx1ZSBUaGUgdmFsdWUgdG8gY2hlY2suXG4gKiBAcmV0dXJucyB7Ym9vbGVhbn0gUmV0dXJucyBgdHJ1ZWAgaWYgYHZhbHVlYCBpcyBvYmplY3QtbGlrZSwgZWxzZSBgZmFsc2VgLlxuICogQGV4YW1wbGVcbiAqXG4gKiBfLmlzT2JqZWN0TGlrZSh7fSk7XG4gKiAvLyA9PiB0cnVlXG4gKlxuICogXy5pc09iamVjdExpa2UoWzEsIDIsIDNdKTtcbiAqIC8vID0+IHRydWVcbiAqXG4gKiBfLmlzT2JqZWN0TGlrZShfLm5vb3ApO1xuICogLy8gPT4gZmFsc2VcbiAqXG4gKiBfLmlzT2JqZWN0TGlrZShudWxsKTtcbiAqIC8vID0+IGZhbHNlXG4gKi9cbmZ1bmN0aW9uIGlzT2JqZWN0TGlrZSh2YWx1ZSkge1xuICByZXR1cm4gISF2YWx1ZSAmJiB0eXBlb2YgdmFsdWUgPT0gJ29iamVjdCc7XG59XG5cbi8qKlxuICogQ2hlY2tzIGlmIGB2YWx1ZWAgaXMgY2xhc3NpZmllZCBhcyBhIGBTeW1ib2xgIHByaW1pdGl2ZSBvciBvYmplY3QuXG4gKlxuICogQHN0YXRpY1xuICogQG1lbWJlck9mIF9cbiAqIEBzaW5jZSA0LjAuMFxuICogQGNhdGVnb3J5IExhbmdcbiAqIEBwYXJhbSB7Kn0gdmFsdWUgVGhlIHZhbHVlIHRvIGNoZWNrLlxuICogQHJldHVybnMge2Jvb2xlYW59IFJldHVybnMgYHRydWVgIGlmIGB2YWx1ZWAgaXMgYSBzeW1ib2wsIGVsc2UgYGZhbHNlYC5cbiAqIEBleGFtcGxlXG4gKlxuICogXy5pc1N5bWJvbChTeW1ib2wuaXRlcmF0b3IpO1xuICogLy8gPT4gdHJ1ZVxuICpcbiAqIF8uaXNTeW1ib2woJ2FiYycpO1xuICogLy8gPT4gZmFsc2VcbiAqL1xuZnVuY3Rpb24gaXNTeW1ib2wodmFsdWUpIHtcbiAgcmV0dXJuIHR5cGVvZiB2YWx1ZSA9PSAnc3ltYm9sJyB8fFxuICAgIChpc09iamVjdExpa2UodmFsdWUpICYmIG9iamVjdFRvU3RyaW5nLmNhbGwodmFsdWUpID09IHN5bWJvbFRhZyk7XG59XG5cbi8qKlxuICogQ29udmVydHMgYHZhbHVlYCB0byBhIG51bWJlci5cbiAqXG4gKiBAc3RhdGljXG4gKiBAbWVtYmVyT2YgX1xuICogQHNpbmNlIDQuMC4wXG4gKiBAY2F0ZWdvcnkgTGFuZ1xuICogQHBhcmFtIHsqfSB2YWx1ZSBUaGUgdmFsdWUgdG8gcHJvY2Vzcy5cbiAqIEByZXR1cm5zIHtudW1iZXJ9IFJldHVybnMgdGhlIG51bWJlci5cbiAqIEBleGFtcGxlXG4gKlxuICogXy50b051bWJlcigzLjIpO1xuICogLy8gPT4gMy4yXG4gKlxuICogXy50b051bWJlcihOdW1iZXIuTUlOX1ZBTFVFKTtcbiAqIC8vID0+IDVlLTMyNFxuICpcbiAqIF8udG9OdW1iZXIoSW5maW5pdHkpO1xuICogLy8gPT4gSW5maW5pdHlcbiAqXG4gKiBfLnRvTnVtYmVyKCczLjInKTtcbiAqIC8vID0+IDMuMlxuICovXG5mdW5jdGlvbiB0b051bWJlcih2YWx1ZSkge1xuICBpZiAodHlwZW9mIHZhbHVlID09ICdudW1iZXInKSB7XG4gICAgcmV0dXJuIHZhbHVlO1xuICB9XG4gIGlmIChpc1N5bWJvbCh2YWx1ZSkpIHtcbiAgICByZXR1cm4gTkFOO1xuICB9XG4gIGlmIChpc09iamVjdCh2YWx1ZSkpIHtcbiAgICB2YXIgb3RoZXIgPSB0eXBlb2YgdmFsdWUudmFsdWVPZiA9PSAnZnVuY3Rpb24nID8gdmFsdWUudmFsdWVPZigpIDogdmFsdWU7XG4gICAgdmFsdWUgPSBpc09iamVjdChvdGhlcikgPyAob3RoZXIgKyAnJykgOiBvdGhlcjtcbiAgfVxuICBpZiAodHlwZW9mIHZhbHVlICE9ICdzdHJpbmcnKSB7XG4gICAgcmV0dXJuIHZhbHVlID09PSAwID8gdmFsdWUgOiArdmFsdWU7XG4gIH1cbiAgdmFsdWUgPSB2YWx1ZS5yZXBsYWNlKHJlVHJpbSwgJycpO1xuICB2YXIgaXNCaW5hcnkgPSByZUlzQmluYXJ5LnRlc3QodmFsdWUpO1xuICByZXR1cm4gKGlzQmluYXJ5IHx8IHJlSXNPY3RhbC50ZXN0KHZhbHVlKSlcbiAgICA/IGZyZWVQYXJzZUludCh2YWx1ZS5zbGljZSgyKSwgaXNCaW5hcnkgPyAyIDogOClcbiAgICA6IChyZUlzQmFkSGV4LnRlc3QodmFsdWUpID8gTkFOIDogK3ZhbHVlKTtcbn1cblxubW9kdWxlLmV4cG9ydHMgPSB0aHJvdHRsZTtcbiIsInZhciBnO1xyXG5cclxuLy8gVGhpcyB3b3JrcyBpbiBub24tc3RyaWN0IG1vZGVcclxuZyA9IChmdW5jdGlvbigpIHtcclxuXHRyZXR1cm4gdGhpcztcclxufSkoKTtcclxuXHJcbnRyeSB7XHJcblx0Ly8gVGhpcyB3b3JrcyBpZiBldmFsIGlzIGFsbG93ZWQgKHNlZSBDU1ApXHJcblx0ZyA9IGcgfHwgRnVuY3Rpb24oXCJyZXR1cm4gdGhpc1wiKSgpIHx8ICgxLCBldmFsKShcInRoaXNcIik7XHJcbn0gY2F0Y2ggKGUpIHtcclxuXHQvLyBUaGlzIHdvcmtzIGlmIHRoZSB3aW5kb3cgcmVmZXJlbmNlIGlzIGF2YWlsYWJsZVxyXG5cdGlmICh0eXBlb2Ygd2luZG93ID09PSBcIm9iamVjdFwiKSBnID0gd2luZG93O1xyXG59XHJcblxyXG4vLyBnIGNhbiBzdGlsbCBiZSB1bmRlZmluZWQsIGJ1dCBub3RoaW5nIHRvIGRvIGFib3V0IGl0Li4uXHJcbi8vIFdlIHJldHVybiB1bmRlZmluZWQsIGluc3RlYWQgb2Ygbm90aGluZyBoZXJlLCBzbyBpdCdzXHJcbi8vIGVhc2llciB0byBoYW5kbGUgdGhpcyBjYXNlLiBpZighZ2xvYmFsKSB7IC4uLn1cclxuXHJcbm1vZHVsZS5leHBvcnRzID0gZztcclxuIiwiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5pbXBvcnQgeyBnZXRFbGVtZW50c0ZvclNvdXJjZUxpbmUgfSBmcm9tICcuL3Njcm9sbC1zeW5jJztcblxuZXhwb3J0IGNsYXNzIEFjdGl2ZUxpbmVNYXJrZXIge1xuXHRwcml2YXRlIF9jdXJyZW50OiBhbnk7XG5cblx0b25EaWRDaGFuZ2VUZXh0RWRpdG9yU2VsZWN0aW9uKGxpbmU6IG51bWJlcikge1xuXHRcdGNvbnN0IHsgcHJldmlvdXMgfSA9IGdldEVsZW1lbnRzRm9yU291cmNlTGluZShsaW5lKTtcblx0XHR0aGlzLl91cGRhdGUocHJldmlvdXMgJiYgcHJldmlvdXMuZWxlbWVudCk7XG5cdH1cblxuXHRfdXBkYXRlKGJlZm9yZTogSFRNTEVsZW1lbnQgfCB1bmRlZmluZWQpIHtcblx0XHR0aGlzLl91bm1hcmtBY3RpdmVFbGVtZW50KHRoaXMuX2N1cnJlbnQpO1xuXHRcdHRoaXMuX21hcmtBY3RpdmVFbGVtZW50KGJlZm9yZSk7XG5cdFx0dGhpcy5fY3VycmVudCA9IGJlZm9yZTtcblx0fVxuXG5cdF91bm1hcmtBY3RpdmVFbGVtZW50KGVsZW1lbnQ6IEhUTUxFbGVtZW50IHwgdW5kZWZpbmVkKSB7XG5cdFx0aWYgKCFlbGVtZW50KSB7XG5cdFx0XHRyZXR1cm47XG5cdFx0fVxuXHRcdGVsZW1lbnQuY2xhc3NOYW1lID0gZWxlbWVudC5jbGFzc05hbWUucmVwbGFjZSgvXFxiY29kZS1hY3RpdmUtbGluZVxcYi9nLCAnJyk7XG5cdH1cblxuXHRfbWFya0FjdGl2ZUVsZW1lbnQoZWxlbWVudDogSFRNTEVsZW1lbnQgfCB1bmRlZmluZWQpIHtcblx0XHRpZiAoIWVsZW1lbnQpIHtcblx0XHRcdHJldHVybjtcblx0XHR9XG5cdFx0ZWxlbWVudC5jbGFzc05hbWUgKz0gJyBjb2RlLWFjdGl2ZS1saW5lJztcblx0fVxufSIsIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5leHBvcnQgZnVuY3Rpb24gb25jZURvY3VtZW50TG9hZGVkKGY6ICgpID0+IHZvaWQpIHtcblx0aWYgKGRvY3VtZW50LnJlYWR5U3RhdGUgPT09ICdsb2FkaW5nJyB8fCBkb2N1bWVudC5yZWFkeVN0YXRlIGFzIHN0cmluZyA9PT0gJ3VuaW5pdGlhbGl6ZWQnKSB7XG5cdFx0ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsIGYpO1xuXHR9IGVsc2Uge1xuXHRcdGYoKTtcblx0fVxufSIsIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBBY3RpdmVMaW5lTWFya2VyIH0gZnJvbSAnLi9hY3RpdmVMaW5lTWFya2VyJztcbmltcG9ydCB7IG9uY2VEb2N1bWVudExvYWRlZCB9IGZyb20gJy4vZXZlbnRzJztcbmltcG9ydCB7IGNyZWF0ZVBvc3RlckZvclZzQ29kZSB9IGZyb20gJy4vbWVzc2FnaW5nJztcbmltcG9ydCB7IGdldEVkaXRvckxpbmVOdW1iZXJGb3JQYWdlT2Zmc2V0LCBzY3JvbGxUb1JldmVhbFNvdXJjZUxpbmUsIGdldExpbmVFbGVtZW50Rm9yRnJhZ21lbnQgfSBmcm9tICcuL3Njcm9sbC1zeW5jJztcbmltcG9ydCB7IGdldFNldHRpbmdzLCBnZXREYXRhIH0gZnJvbSAnLi9zZXR0aW5ncyc7XG5pbXBvcnQgdGhyb3R0bGUgPSByZXF1aXJlKCdsb2Rhc2gudGhyb3R0bGUnKTtcblxuZGVjbGFyZSB2YXIgYWNxdWlyZVZzQ29kZUFwaTogYW55O1xuXG5sZXQgc2Nyb2xsRGlzYWJsZWQgPSB0cnVlO1xuY29uc3QgbWFya2VyID0gbmV3IEFjdGl2ZUxpbmVNYXJrZXIoKTtcbmNvbnN0IHNldHRpbmdzID0gZ2V0U2V0dGluZ3MoKTtcblxuY29uc3QgdnNjb2RlID0gYWNxdWlyZVZzQ29kZUFwaSgpO1xuXG4vLyBTZXQgVlMgQ29kZSBzdGF0ZVxubGV0IHN0YXRlID0gZ2V0RGF0YTx7IGxpbmU6IG51bWJlciwgIGZyYWdtZW50OiBzdHJpbmcgfT4oJ2RhdGEtc3RhdGUnKTtcbnZzY29kZS5zZXRTdGF0ZShzdGF0ZSk7XG5cbmNvbnN0IG1lc3NhZ2luZyA9IGNyZWF0ZVBvc3RlckZvclZzQ29kZSh2c2NvZGUpO1xuXG53aW5kb3cuY3NwQWxlcnRlci5zZXRQb3N0ZXIobWVzc2FnaW5nKTtcbndpbmRvdy5zdHlsZUxvYWRpbmdNb25pdG9yLnNldFBvc3RlcihtZXNzYWdpbmcpO1xuXG53aW5kb3cub25sb2FkID0gKCkgPT4ge1xuXHR1cGRhdGVJbWFnZVNpemVzKCk7XG59O1xuXG5vbmNlRG9jdW1lbnRMb2FkZWQoKCkgPT4ge1xuXHRpZiAoc2V0dGluZ3Muc2Nyb2xsUHJldmlld1dpdGhFZGl0b3IpIHtcblx0XHRzZXRUaW1lb3V0KCgpID0+IHtcblx0XHRcdC8vIFRyeSB0byBzY3JvbGwgdG8gZnJhZ21lbnQgaWYgYXZhaWxhYmxlXG5cdFx0XHRpZiAoc3RhdGUuZnJhZ21lbnQpIHtcblx0XHRcdFx0Y29uc3QgZWxlbWVudCA9IGdldExpbmVFbGVtZW50Rm9yRnJhZ21lbnQoc3RhdGUuZnJhZ21lbnQpO1xuXHRcdFx0XHRpZiAoZWxlbWVudCkge1xuXHRcdFx0XHRcdHNjcm9sbERpc2FibGVkID0gdHJ1ZTtcblx0XHRcdFx0XHRzY3JvbGxUb1JldmVhbFNvdXJjZUxpbmUoZWxlbWVudC5saW5lKTtcblx0XHRcdFx0fVxuXHRcdFx0fSBlbHNlIHtcblx0XHRcdFx0Y29uc3QgaW5pdGlhbExpbmUgPSArc2V0dGluZ3MubGluZTtcblx0XHRcdFx0aWYgKCFpc05hTihpbml0aWFsTGluZSkpIHtcblx0XHRcdFx0XHRzY3JvbGxEaXNhYmxlZCA9IHRydWU7XG5cdFx0XHRcdFx0c2Nyb2xsVG9SZXZlYWxTb3VyY2VMaW5lKGluaXRpYWxMaW5lKTtcblx0XHRcdFx0fVxuXHRcdFx0fVxuXHRcdH0sIDApO1xuXHR9XG59KTtcblxuY29uc3Qgb25VcGRhdGVWaWV3ID0gKCgpID0+IHtcblx0Y29uc3QgZG9TY3JvbGwgPSB0aHJvdHRsZSgobGluZTogbnVtYmVyKSA9PiB7XG5cdFx0c2Nyb2xsRGlzYWJsZWQgPSB0cnVlO1xuXHRcdHNjcm9sbFRvUmV2ZWFsU291cmNlTGluZShsaW5lKTtcblx0fSwgNTApO1xuXG5cdHJldHVybiAobGluZTogbnVtYmVyLCBzZXR0aW5nczogYW55KSA9PiB7XG5cdFx0aWYgKCFpc05hTihsaW5lKSkge1xuXHRcdFx0c2V0dGluZ3MubGluZSA9IGxpbmU7XG5cdFx0XHRkb1Njcm9sbChsaW5lKTtcblx0XHR9XG5cdH07XG59KSgpO1xuXG5sZXQgdXBkYXRlSW1hZ2VTaXplcyA9IHRocm90dGxlKCgpID0+IHtcblx0Y29uc3QgaW1hZ2VJbmZvOiB7IGlkOiBzdHJpbmcsIGhlaWdodDogbnVtYmVyLCB3aWR0aDogbnVtYmVyIH1bXSA9IFtdO1xuXHRsZXQgaW1hZ2VzID0gZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ2ltZycpO1xuXHRpZiAoaW1hZ2VzKSB7XG5cdFx0bGV0IGk7XG5cdFx0Zm9yIChpID0gMDsgaSA8IGltYWdlcy5sZW5ndGg7IGkrKykge1xuXHRcdFx0Y29uc3QgaW1nID0gaW1hZ2VzW2ldO1xuXG5cdFx0XHRpZiAoaW1nLmNsYXNzTGlzdC5jb250YWlucygnbG9hZGluZycpKSB7XG5cdFx0XHRcdGltZy5jbGFzc0xpc3QucmVtb3ZlKCdsb2FkaW5nJyk7XG5cdFx0XHR9XG5cblx0XHRcdGltYWdlSW5mby5wdXNoKHtcblx0XHRcdFx0aWQ6IGltZy5pZCxcblx0XHRcdFx0aGVpZ2h0OiBpbWcuaGVpZ2h0LFxuXHRcdFx0XHR3aWR0aDogaW1nLndpZHRoXG5cdFx0XHR9KTtcblx0XHR9XG5cblx0XHRtZXNzYWdpbmcucG9zdE1lc3NhZ2UoJ2NhY2hlSW1hZ2VTaXplcycsIGltYWdlSW5mbyk7XG5cdH1cbn0sIDUwKTtcblxud2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ3Jlc2l6ZScsICgpID0+IHtcblx0c2Nyb2xsRGlzYWJsZWQgPSB0cnVlO1xuXHR1cGRhdGVJbWFnZVNpemVzKCk7XG59LCB0cnVlKTtcblxud2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ21lc3NhZ2UnLCBldmVudCA9PiB7XG5cdGlmIChldmVudC5kYXRhLnNvdXJjZSAhPT0gc2V0dGluZ3Muc291cmNlKSB7XG5cdFx0cmV0dXJuO1xuXHR9XG5cblx0c3dpdGNoIChldmVudC5kYXRhLnR5cGUpIHtcblx0XHRjYXNlICdvbkRpZENoYW5nZVRleHRFZGl0b3JTZWxlY3Rpb24nOlxuXHRcdFx0bWFya2VyLm9uRGlkQ2hhbmdlVGV4dEVkaXRvclNlbGVjdGlvbihldmVudC5kYXRhLmxpbmUpO1xuXHRcdFx0YnJlYWs7XG5cblx0XHRjYXNlICd1cGRhdGVWaWV3Jzpcblx0XHRcdG9uVXBkYXRlVmlldyhldmVudC5kYXRhLmxpbmUsIHNldHRpbmdzKTtcblx0XHRcdGJyZWFrO1xuXHR9XG59LCBmYWxzZSk7XG5cbmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoJ2RibGNsaWNrJywgZXZlbnQgPT4ge1xuXHRpZiAoIXNldHRpbmdzLmRvdWJsZUNsaWNrVG9Td2l0Y2hUb0VkaXRvcikge1xuXHRcdHJldHVybjtcblx0fVxuXG5cdC8vIElnbm9yZSBjbGlja3Mgb24gbGlua3Ncblx0Zm9yIChsZXQgbm9kZSA9IGV2ZW50LnRhcmdldCBhcyBIVE1MRWxlbWVudDsgbm9kZTsgbm9kZSA9IG5vZGUucGFyZW50Tm9kZSBhcyBIVE1MRWxlbWVudCkge1xuXHRcdGlmIChub2RlLnRhZ05hbWUgPT09ICdBJykge1xuXHRcdFx0cmV0dXJuO1xuXHRcdH1cblx0fVxuXG5cdGNvbnN0IG9mZnNldCA9IGV2ZW50LnBhZ2VZO1xuXHRjb25zdCBsaW5lID0gZ2V0RWRpdG9yTGluZU51bWJlckZvclBhZ2VPZmZzZXQob2Zmc2V0KTtcblx0aWYgKHR5cGVvZiBsaW5lID09PSAnbnVtYmVyJyAmJiAhaXNOYU4obGluZSkpIHtcblx0XHRtZXNzYWdpbmcucG9zdE1lc3NhZ2UoJ2RpZENsaWNrJywgeyBsaW5lOiBNYXRoLmZsb29yKGxpbmUpIH0pO1xuXHR9XG59KTtcblxuZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCBldmVudCA9PiB7XG5cdGlmICghZXZlbnQpIHtcblx0XHRyZXR1cm47XG5cdH1cblxuXHRsZXQgbm9kZTogYW55ID0gZXZlbnQudGFyZ2V0O1xuXHR3aGlsZSAobm9kZSkge1xuXHRcdGlmIChub2RlLnRhZ05hbWUgJiYgbm9kZS50YWdOYW1lID09PSAnQScgJiYgbm9kZS5ocmVmKSB7XG5cdFx0XHRpZiAobm9kZS5nZXRBdHRyaWJ1dGUoJ2hyZWYnKS5zdGFydHNXaXRoKCcjJykpIHtcblx0XHRcdFx0YnJlYWs7XG5cdFx0XHR9XG5cdFx0XHRpZiAobm9kZS5ocmVmLnN0YXJ0c1dpdGgoJ2ZpbGU6Ly8nKSB8fCBub2RlLmhyZWYuc3RhcnRzV2l0aCgndnNjb2RlLXJlc291cmNlOicpIHx8IG5vZGUuaHJlZi5zdGFydHNXaXRoKHNldHRpbmdzLndlYnZpZXdSZXNvdXJjZVJvb3QpKSB7XG5cdFx0XHRcdGNvbnN0IFtwYXRoLCBmcmFnbWVudF0gPSBub2RlLmhyZWYucmVwbGFjZSgvXihmaWxlOlxcL1xcL3x2c2NvZGUtcmVzb3VyY2U6KS9pLCAnJykucmVwbGFjZShuZXcgUmVnRXhwKGBeJHtlc2NhcGVSZWdFeHAoc2V0dGluZ3Mud2Vidmlld1Jlc291cmNlUm9vdCl9YCkpLnNwbGl0KCcjJyk7XG5cdFx0XHRcdG1lc3NhZ2luZy5wb3N0TWVzc2FnZSgnY2xpY2tMaW5rJywgeyBwYXRoLCBmcmFnbWVudCB9KTtcblx0XHRcdFx0ZXZlbnQucHJldmVudERlZmF1bHQoKTtcblx0XHRcdFx0ZXZlbnQuc3RvcFByb3BhZ2F0aW9uKCk7XG5cdFx0XHRcdGJyZWFrO1xuXHRcdFx0fVxuXHRcdFx0YnJlYWs7XG5cdFx0fVxuXHRcdG5vZGUgPSBub2RlLnBhcmVudE5vZGU7XG5cdH1cbn0sIHRydWUpO1xuXG5pZiAoc2V0dGluZ3Muc2Nyb2xsRWRpdG9yV2l0aFByZXZpZXcpIHtcblx0d2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ3Njcm9sbCcsIHRocm90dGxlKCgpID0+IHtcblx0XHRpZiAoc2Nyb2xsRGlzYWJsZWQpIHtcblx0XHRcdHNjcm9sbERpc2FibGVkID0gZmFsc2U7XG5cdFx0fSBlbHNlIHtcblx0XHRcdGNvbnN0IGxpbmUgPSBnZXRFZGl0b3JMaW5lTnVtYmVyRm9yUGFnZU9mZnNldCh3aW5kb3cuc2Nyb2xsWSk7XG5cdFx0XHRpZiAodHlwZW9mIGxpbmUgPT09ICdudW1iZXInICYmICFpc05hTihsaW5lKSkge1xuXHRcdFx0XHRtZXNzYWdpbmcucG9zdE1lc3NhZ2UoJ3JldmVhbExpbmUnLCB7IGxpbmUgfSk7XG5cdFx0XHRcdHN0YXRlLmxpbmUgPSBsaW5lO1xuXHRcdFx0XHR2c2NvZGUuc2V0U3RhdGUoc3RhdGUpO1xuXHRcdFx0fVxuXHRcdH1cblx0fSwgNTApKTtcbn1cblxuZnVuY3Rpb24gZXNjYXBlUmVnRXhwKHRleHQ6IHN0cmluZykge1xuXHRyZXR1cm4gdGV4dC5yZXBsYWNlKC9bLVtcXF17fSgpKis/LixcXFxcXiR8I1xcc10vZywgJ1xcXFwkJicpO1xufVxuIiwiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IGdldFNldHRpbmdzIH0gZnJvbSAnLi9zZXR0aW5ncyc7XG5cbmV4cG9ydCBpbnRlcmZhY2UgTWVzc2FnZVBvc3RlciB7XG5cdC8qKlxuXHQgKiBQb3N0IGEgbWVzc2FnZSB0byB0aGUgbWFya2Rvd24gZXh0ZW5zaW9uXG5cdCAqL1xuXHRwb3N0TWVzc2FnZSh0eXBlOiBzdHJpbmcsIGJvZHk6IG9iamVjdCk6IHZvaWQ7XG59XG5cbmV4cG9ydCBjb25zdCBjcmVhdGVQb3N0ZXJGb3JWc0NvZGUgPSAodnNjb2RlOiBhbnkpID0+IHtcblx0cmV0dXJuIG5ldyBjbGFzcyBpbXBsZW1lbnRzIE1lc3NhZ2VQb3N0ZXIge1xuXHRcdHBvc3RNZXNzYWdlKHR5cGU6IHN0cmluZywgYm9keTogb2JqZWN0KTogdm9pZCB7XG5cdFx0XHR2c2NvZGUucG9zdE1lc3NhZ2Uoe1xuXHRcdFx0XHR0eXBlLFxuXHRcdFx0XHRzb3VyY2U6IGdldFNldHRpbmdzKCkuc291cmNlLFxuXHRcdFx0XHRib2R5XG5cdFx0XHR9KTtcblx0XHR9XG5cdH07XG59O1xuXG4iLCIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgZ2V0U2V0dGluZ3MgfSBmcm9tICcuL3NldHRpbmdzJztcblxuXG5mdW5jdGlvbiBjbGFtcChtaW46IG51bWJlciwgbWF4OiBudW1iZXIsIHZhbHVlOiBudW1iZXIpIHtcblx0cmV0dXJuIE1hdGgubWluKG1heCwgTWF0aC5tYXgobWluLCB2YWx1ZSkpO1xufVxuXG5mdW5jdGlvbiBjbGFtcExpbmUobGluZTogbnVtYmVyKSB7XG5cdHJldHVybiBjbGFtcCgwLCBnZXRTZXR0aW5ncygpLmxpbmVDb3VudCAtIDEsIGxpbmUpO1xufVxuXG5cbmV4cG9ydCBpbnRlcmZhY2UgQ29kZUxpbmVFbGVtZW50IHtcblx0ZWxlbWVudDogSFRNTEVsZW1lbnQ7XG5cdGxpbmU6IG51bWJlcjtcbn1cblxuY29uc3QgZ2V0Q29kZUxpbmVFbGVtZW50cyA9ICgoKSA9PiB7XG5cdGxldCBlbGVtZW50czogQ29kZUxpbmVFbGVtZW50W107XG5cdHJldHVybiAoKSA9PiB7XG5cdFx0aWYgKCFlbGVtZW50cykge1xuXHRcdFx0ZWxlbWVudHMgPSBbeyBlbGVtZW50OiBkb2N1bWVudC5ib2R5LCBsaW5lOiAwIH1dO1xuXHRcdFx0Zm9yIChjb25zdCBlbGVtZW50IG9mIGRvY3VtZW50LmdldEVsZW1lbnRzQnlDbGFzc05hbWUoJ2NvZGUtbGluZScpKSB7XG5cdFx0XHRcdGNvbnN0IGxpbmUgPSArZWxlbWVudC5nZXRBdHRyaWJ1dGUoJ2RhdGEtbGluZScpITtcblx0XHRcdFx0aWYgKCFpc05hTihsaW5lKSkge1xuXHRcdFx0XHRcdGVsZW1lbnRzLnB1c2goeyBlbGVtZW50OiBlbGVtZW50IGFzIEhUTUxFbGVtZW50LCBsaW5lIH0pO1xuXHRcdFx0XHR9XG5cdFx0XHR9XG5cdFx0fVxuXHRcdHJldHVybiBlbGVtZW50cztcblx0fTtcbn0pKCk7XG5cbi8qKlxuICogRmluZCB0aGUgaHRtbCBlbGVtZW50cyB0aGF0IG1hcCB0byBhIHNwZWNpZmljIHRhcmdldCBsaW5lIGluIHRoZSBlZGl0b3IuXG4gKlxuICogSWYgYW4gZXhhY3QgbWF0Y2gsIHJldHVybnMgYSBzaW5nbGUgZWxlbWVudC4gSWYgdGhlIGxpbmUgaXMgYmV0d2VlbiBlbGVtZW50cyxcbiAqIHJldHVybnMgdGhlIGVsZW1lbnQgcHJpb3IgdG8gYW5kIHRoZSBlbGVtZW50IGFmdGVyIHRoZSBnaXZlbiBsaW5lLlxuICovXG5leHBvcnQgZnVuY3Rpb24gZ2V0RWxlbWVudHNGb3JTb3VyY2VMaW5lKHRhcmdldExpbmU6IG51bWJlcik6IHsgcHJldmlvdXM6IENvZGVMaW5lRWxlbWVudDsgbmV4dD86IENvZGVMaW5lRWxlbWVudDsgfSB7XG5cdGNvbnN0IGxpbmVOdW1iZXIgPSBNYXRoLmZsb29yKHRhcmdldExpbmUpO1xuXHRjb25zdCBsaW5lcyA9IGdldENvZGVMaW5lRWxlbWVudHMoKTtcblx0bGV0IHByZXZpb3VzID0gbGluZXNbMF0gfHwgbnVsbDtcblx0Zm9yIChjb25zdCBlbnRyeSBvZiBsaW5lcykge1xuXHRcdGlmIChlbnRyeS5saW5lID09PSBsaW5lTnVtYmVyKSB7XG5cdFx0XHRyZXR1cm4geyBwcmV2aW91czogZW50cnksIG5leHQ6IHVuZGVmaW5lZCB9O1xuXHRcdH0gZWxzZSBpZiAoZW50cnkubGluZSA+IGxpbmVOdW1iZXIpIHtcblx0XHRcdHJldHVybiB7IHByZXZpb3VzLCBuZXh0OiBlbnRyeSB9O1xuXHRcdH1cblx0XHRwcmV2aW91cyA9IGVudHJ5O1xuXHR9XG5cdHJldHVybiB7IHByZXZpb3VzIH07XG59XG5cbi8qKlxuICogRmluZCB0aGUgaHRtbCBlbGVtZW50cyB0aGF0IGFyZSBhdCBhIHNwZWNpZmljIHBpeGVsIG9mZnNldCBvbiB0aGUgcGFnZS5cbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIGdldExpbmVFbGVtZW50c0F0UGFnZU9mZnNldChvZmZzZXQ6IG51bWJlcik6IHsgcHJldmlvdXM6IENvZGVMaW5lRWxlbWVudDsgbmV4dD86IENvZGVMaW5lRWxlbWVudDsgfSB7XG5cdGNvbnN0IGxpbmVzID0gZ2V0Q29kZUxpbmVFbGVtZW50cygpO1xuXHRjb25zdCBwb3NpdGlvbiA9IG9mZnNldCAtIHdpbmRvdy5zY3JvbGxZO1xuXHRsZXQgbG8gPSAtMTtcblx0bGV0IGhpID0gbGluZXMubGVuZ3RoIC0gMTtcblx0d2hpbGUgKGxvICsgMSA8IGhpKSB7XG5cdFx0Y29uc3QgbWlkID0gTWF0aC5mbG9vcigobG8gKyBoaSkgLyAyKTtcblx0XHRjb25zdCBib3VuZHMgPSBsaW5lc1ttaWRdLmVsZW1lbnQuZ2V0Qm91bmRpbmdDbGllbnRSZWN0KCk7XG5cdFx0aWYgKGJvdW5kcy50b3AgKyBib3VuZHMuaGVpZ2h0ID49IHBvc2l0aW9uKSB7XG5cdFx0XHRoaSA9IG1pZDtcblx0XHR9XG5cdFx0ZWxzZSB7XG5cdFx0XHRsbyA9IG1pZDtcblx0XHR9XG5cdH1cblx0Y29uc3QgaGlFbGVtZW50ID0gbGluZXNbaGldO1xuXHRjb25zdCBoaUJvdW5kcyA9IGhpRWxlbWVudC5lbGVtZW50LmdldEJvdW5kaW5nQ2xpZW50UmVjdCgpO1xuXHRpZiAoaGkgPj0gMSAmJiBoaUJvdW5kcy50b3AgPiBwb3NpdGlvbikge1xuXHRcdGNvbnN0IGxvRWxlbWVudCA9IGxpbmVzW2xvXTtcblx0XHRyZXR1cm4geyBwcmV2aW91czogbG9FbGVtZW50LCBuZXh0OiBoaUVsZW1lbnQgfTtcblx0fVxuXHRyZXR1cm4geyBwcmV2aW91czogaGlFbGVtZW50IH07XG59XG5cbi8qKlxuICogQXR0ZW1wdCB0byByZXZlYWwgdGhlIGVsZW1lbnQgZm9yIGEgc291cmNlIGxpbmUgaW4gdGhlIGVkaXRvci5cbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIHNjcm9sbFRvUmV2ZWFsU291cmNlTGluZShsaW5lOiBudW1iZXIpIHtcblx0aWYgKCFnZXRTZXR0aW5ncygpLnNjcm9sbFByZXZpZXdXaXRoRWRpdG9yKSB7XG5cdFx0cmV0dXJuO1xuXHR9XG5cblx0aWYgKGxpbmUgPD0gMCkge1xuXHRcdHdpbmRvdy5zY3JvbGwod2luZG93LnNjcm9sbFgsIDApO1xuXHRcdHJldHVybjtcblx0fVxuXG5cdGNvbnN0IHsgcHJldmlvdXMsIG5leHQgfSA9IGdldEVsZW1lbnRzRm9yU291cmNlTGluZShsaW5lKTtcblx0aWYgKCFwcmV2aW91cykge1xuXHRcdHJldHVybjtcblx0fVxuXHRsZXQgc2Nyb2xsVG8gPSAwO1xuXHRjb25zdCByZWN0ID0gcHJldmlvdXMuZWxlbWVudC5nZXRCb3VuZGluZ0NsaWVudFJlY3QoKTtcblx0Y29uc3QgcHJldmlvdXNUb3AgPSByZWN0LnRvcDtcblx0aWYgKG5leHQgJiYgbmV4dC5saW5lICE9PSBwcmV2aW91cy5saW5lKSB7XG5cdFx0Ly8gQmV0d2VlbiB0d28gZWxlbWVudHMuIEdvIHRvIHBlcmNlbnRhZ2Ugb2Zmc2V0IGJldHdlZW4gdGhlbS5cblx0XHRjb25zdCBiZXR3ZWVuUHJvZ3Jlc3MgPSAobGluZSAtIHByZXZpb3VzLmxpbmUpIC8gKG5leHQubGluZSAtIHByZXZpb3VzLmxpbmUpO1xuXHRcdGNvbnN0IGVsZW1lbnRPZmZzZXQgPSBuZXh0LmVsZW1lbnQuZ2V0Qm91bmRpbmdDbGllbnRSZWN0KCkudG9wIC0gcHJldmlvdXNUb3A7XG5cdFx0c2Nyb2xsVG8gPSBwcmV2aW91c1RvcCArIGJldHdlZW5Qcm9ncmVzcyAqIGVsZW1lbnRPZmZzZXQ7XG5cdH0gZWxzZSB7XG5cdFx0Y29uc3QgcHJvZ3Jlc3NJbkVsZW1lbnQgPSBsaW5lIC0gTWF0aC5mbG9vcihsaW5lKTtcblx0XHRzY3JvbGxUbyA9IHByZXZpb3VzVG9wICsgKHJlY3QuaGVpZ2h0ICogcHJvZ3Jlc3NJbkVsZW1lbnQpO1xuXHR9XG5cdHdpbmRvdy5zY3JvbGwod2luZG93LnNjcm9sbFgsIE1hdGgubWF4KDEsIHdpbmRvdy5zY3JvbGxZICsgc2Nyb2xsVG8pKTtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIGdldEVkaXRvckxpbmVOdW1iZXJGb3JQYWdlT2Zmc2V0KG9mZnNldDogbnVtYmVyKSB7XG5cdGNvbnN0IHsgcHJldmlvdXMsIG5leHQgfSA9IGdldExpbmVFbGVtZW50c0F0UGFnZU9mZnNldChvZmZzZXQpO1xuXHRpZiAocHJldmlvdXMpIHtcblx0XHRjb25zdCBwcmV2aW91c0JvdW5kcyA9IHByZXZpb3VzLmVsZW1lbnQuZ2V0Qm91bmRpbmdDbGllbnRSZWN0KCk7XG5cdFx0Y29uc3Qgb2Zmc2V0RnJvbVByZXZpb3VzID0gKG9mZnNldCAtIHdpbmRvdy5zY3JvbGxZIC0gcHJldmlvdXNCb3VuZHMudG9wKTtcblx0XHRpZiAobmV4dCkge1xuXHRcdFx0Y29uc3QgcHJvZ3Jlc3NCZXR3ZWVuRWxlbWVudHMgPSBvZmZzZXRGcm9tUHJldmlvdXMgLyAobmV4dC5lbGVtZW50LmdldEJvdW5kaW5nQ2xpZW50UmVjdCgpLnRvcCAtIHByZXZpb3VzQm91bmRzLnRvcCk7XG5cdFx0XHRjb25zdCBsaW5lID0gcHJldmlvdXMubGluZSArIHByb2dyZXNzQmV0d2VlbkVsZW1lbnRzICogKG5leHQubGluZSAtIHByZXZpb3VzLmxpbmUpO1xuXHRcdFx0cmV0dXJuIGNsYW1wTGluZShsaW5lKTtcblx0XHR9XG5cdFx0ZWxzZSB7XG5cdFx0XHRjb25zdCBwcm9ncmVzc1dpdGhpbkVsZW1lbnQgPSBvZmZzZXRGcm9tUHJldmlvdXMgLyAocHJldmlvdXNCb3VuZHMuaGVpZ2h0KTtcblx0XHRcdGNvbnN0IGxpbmUgPSBwcmV2aW91cy5saW5lICsgcHJvZ3Jlc3NXaXRoaW5FbGVtZW50O1xuXHRcdFx0cmV0dXJuIGNsYW1wTGluZShsaW5lKTtcblx0XHR9XG5cdH1cblx0cmV0dXJuIG51bGw7XG59XG5cbi8qKlxuICogVHJ5IHRvIGZpbmQgdGhlIGh0bWwgZWxlbWVudCBieSB1c2luZyBhIGZyYWdtZW50IGlkXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiBnZXRMaW5lRWxlbWVudEZvckZyYWdtZW50KGZyYWdtZW50OiBzdHJpbmcpOiBDb2RlTGluZUVsZW1lbnQgfCB1bmRlZmluZWQge1xuXHRyZXR1cm4gZ2V0Q29kZUxpbmVFbGVtZW50cygpLmZpbmQoKGVsZW1lbnQpID0+IHtcblx0XHRyZXR1cm4gZWxlbWVudC5lbGVtZW50LmlkID09PSBmcmFnbWVudDtcblx0fSk7XG59XG4iLCIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuZXhwb3J0IGludGVyZmFjZSBQcmV2aWV3U2V0dGluZ3Mge1xuXHRyZWFkb25seSBzb3VyY2U6IHN0cmluZztcblx0cmVhZG9ubHkgbGluZTogbnVtYmVyO1xuXHRyZWFkb25seSBsaW5lQ291bnQ6IG51bWJlcjtcblx0cmVhZG9ubHkgc2Nyb2xsUHJldmlld1dpdGhFZGl0b3I/OiBib29sZWFuO1xuXHRyZWFkb25seSBzY3JvbGxFZGl0b3JXaXRoUHJldmlldzogYm9vbGVhbjtcblx0cmVhZG9ubHkgZGlzYWJsZVNlY3VyaXR5V2FybmluZ3M6IGJvb2xlYW47XG5cdHJlYWRvbmx5IGRvdWJsZUNsaWNrVG9Td2l0Y2hUb0VkaXRvcjogYm9vbGVhbjtcblx0cmVhZG9ubHkgd2Vidmlld1Jlc291cmNlUm9vdDogc3RyaW5nO1xufVxuXG5sZXQgY2FjaGVkU2V0dGluZ3M6IFByZXZpZXdTZXR0aW5ncyB8IHVuZGVmaW5lZCA9IHVuZGVmaW5lZDtcblxuZXhwb3J0IGZ1bmN0aW9uIGdldERhdGE8VCA9IHt9PihrZXk6IHN0cmluZyk6IFQge1xuXHRjb25zdCBlbGVtZW50ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3ZzY29kZS1tYXJrZG93bi1wcmV2aWV3LWRhdGEnKTtcblx0aWYgKGVsZW1lbnQpIHtcblx0XHRjb25zdCBkYXRhID0gZWxlbWVudC5nZXRBdHRyaWJ1dGUoa2V5KTtcblx0XHRpZiAoZGF0YSkge1xuXHRcdFx0cmV0dXJuIEpTT04ucGFyc2UoZGF0YSk7XG5cdFx0fVxuXHR9XG5cblx0dGhyb3cgbmV3IEVycm9yKGBDb3VsZCBub3QgbG9hZCBkYXRhIGZvciAke2tleX1gKTtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIGdldFNldHRpbmdzKCk6IFByZXZpZXdTZXR0aW5ncyB7XG5cdGlmIChjYWNoZWRTZXR0aW5ncykge1xuXHRcdHJldHVybiBjYWNoZWRTZXR0aW5ncztcblx0fVxuXG5cdGNhY2hlZFNldHRpbmdzID0gZ2V0RGF0YSgnZGF0YS1zZXR0aW5ncycpO1xuXHRpZiAoY2FjaGVkU2V0dGluZ3MpIHtcblx0XHRyZXR1cm4gY2FjaGVkU2V0dGluZ3M7XG5cdH1cblxuXHR0aHJvdyBuZXcgRXJyb3IoJ0NvdWxkIG5vdCBsb2FkIHNldHRpbmdzJyk7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9</script>
+
+    </body>
+</html>
